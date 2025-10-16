@@ -264,6 +264,7 @@ table {
 .slide {
   flex: 0 0 100%;
   display: flex;
+  cursor: pointer;
 }
 
 /* DogsDay.jsx */
