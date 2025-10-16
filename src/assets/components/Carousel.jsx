@@ -109,13 +109,13 @@ const slides = [
             fontWeight: "bolder",
             color: "#000",
             fontFamily: "YeogiOttaeJalnan",
-            marginTop: "15px",
+            marginTop: "10px",
             fontSize: "50px",
           }}
         >
-          기초 검진
+          기초검진
         </span>
-        무료
+        &nbsp;무료
       </>
     ),
     bg: "#90EE90",
