@@ -7,10 +7,6 @@ import Reservation from "./Reservation";
 import Information from "./Infomation";
 import Sns from "./Sns";
 import MakeHappy from "./MakeHappy";
-// import Login from "./Login";
-// import FindId from "./FindId";
-// import Join from "./Join";
-// import FindPw from "./FindPw";
 
 const Components = () => {
   return (
@@ -25,10 +21,6 @@ const Components = () => {
       <MakeHappy />
       <Information />
       <Sns />
-      {/* <Login />
-      <FindId />
-      <FindPw />
-      <Join /> */}
     </>
   );
 };

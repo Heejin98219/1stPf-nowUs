@@ -10,31 +10,31 @@ const Join = () => {
           <input
             type="text"
             placeholder="이름을 입력해 주세요"
-            className="nameTbx"
+            className="join-nameTbx"
           ></input>
           <br />
           <input
             type="text"
             placeholder="아이디를 입력해 주세요"
-            className="idTbx"
+            className="join-idTbx"
           ></input>
           <br />
           <input
             type="text"
             placeholder="이메일을 입력해 주세요"
-            className="idTbx"
+            className="join-idTbx"
           ></input>
           <br />
           <input
             type="password"
             placeholder="비밀번호를 입력해 주세요"
-            className="idTbx"
+            className="join-idTbx"
           ></input>
           <br />
           <input
             type="password"
             placeholder="비밀번호를 다시 입력해 주세요"
-            className="idTbx"
+            className="join-idTbx"
           ></input>
           <br />
 

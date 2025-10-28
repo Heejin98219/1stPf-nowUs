@@ -10,19 +10,19 @@ const FindPw = () => {
           <input
             type="text"
             placeholder="이름을 입력해 주세요"
-            className="nameTbx"
+            className="findPw-nameTbx"
           ></input>
           <br />
           <input
             type="text"
             placeholder="이메일을 입력해 주세요"
-            className="mailTbx"
+            className="findPw-mailTbx"
           ></input>
           <br />
           <input
             type="text"
             placeholder="아이디를 입력해 주세요"
-            className="idTbx"
+            className="findPw-idTbx"
           ></input>
           <br />
 

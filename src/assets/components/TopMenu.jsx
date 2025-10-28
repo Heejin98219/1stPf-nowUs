@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const TopMenu = () => {
   return (
     <>
@@ -48,11 +50,17 @@ const TopMenu = () => {
               </ul>
             </li>
             <li className="mainMenu">
-              로그인
+              <Link to="/login">로그인</Link>
               <ul className="subMenu">
-                <li>회원가입</li>
-                <li>아이디 찾기</li>
-                <li>비밀번호 찾기</li>
+                <li>
+                  <Link to="/join">회원가입</Link>
+                </li>
+                <li>
+                  <Link to="/findId">아이디 찾기</Link>
+                </li>
+                <li>
+                  <Link to="/findPw">비밀번호 찾기</Link>
+                </li>
               </ul>
             </li>
           </ul>
