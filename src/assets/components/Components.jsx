@@ -9,9 +9,7 @@ import Sns from "./Sns";
 import MakeHappy from "./MakeHappy";
 // import Login from "./Login";
 // import FindId from "./FindId";
-
 // import Join from "./Join";
-
 // import FindPw from "./FindPw";
 
 const Components = () => {
@@ -26,7 +24,6 @@ const Components = () => {
       <Reservation />
       <MakeHappy />
       <Information />
-
       <Sns />
       {/* <Login />
       <FindId />
@@ -35,5 +32,4 @@ const Components = () => {
     </>
   );
 };
-
 export default Components;

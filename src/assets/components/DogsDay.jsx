@@ -14,7 +14,7 @@ const DogsDay = () => {
           </span>
           <br />
           <span className="promise">
-            지금까지는 모든 동물들이 행복할 수 있는 그 날까지
+            지금, 우리는 모든 동물들이 행복할 수 있는 그 날까지
             <br />
             계속 함께하겠습니다
             <br />

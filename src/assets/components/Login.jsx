@@ -26,4 +26,6 @@ const Login = () => {
   );
 };
 
+// 아이디 찾기, 회원가입 추가하기
+
 export default Login;
