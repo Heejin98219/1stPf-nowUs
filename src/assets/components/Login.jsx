@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Login = () => {
   return (
     <>
@@ -20,6 +22,19 @@ const Login = () => {
           ></input>
           <br />
           <button className="loginBtn">로그인</button>
+          <div>
+            <ul className="extraMenu">
+              <li>
+                <Link to="/join">회원가입&nbsp;|&nbsp;</Link>
+              </li>
+              <li>
+                <Link to="/findId"> 아이디 찾기&nbsp;|&nbsp;</Link>
+              </li>
+              <li>
+                <Link to="/findPw"> 비밀번호 찾기</Link>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </>
