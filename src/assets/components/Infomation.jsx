@@ -1,4 +1,16 @@
 const Information = () => {
+  // 개인정보취급방침 alert
+  const personalInfo = () => {
+    alert("개인정보취급방침에 따라 회원님의 정보는 안전하게 관리됩니다.");
+  };
+
+  // 이메일무단수집거부 alert
+  const unauthorEmail = () => {
+    alert(
+      "본 사이트에 게시된 이메일 주소는 \n스팸 방지를 위해 무단 수집을 금지합니다."
+    );
+  };
+
   return (
     <>
       {/* 회사 정보입니다 */}
@@ -19,8 +31,8 @@ const Information = () => {
       </div>
       <div className="notice-div">
         <ul className="notice-ul">
-          <li>개인정보취급방침</li>
-          <li>이메일무단수집거부</li>
+          <li onClick={personalInfo}>개인정보취급방침</li>
+          <li onClick={unauthorEmail}>이메일무단수집거부</li>
         </ul>
       </div>
     </>
