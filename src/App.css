@@ -141,6 +141,7 @@ table {
   font-family: "PyeongchangPeace";
   padding-top: 2rem;
   margin-bottom: 3.5rem;
+  cursor: pointer;
 }
 .open > .openTxt {
   padding: 10px;
@@ -310,7 +311,6 @@ a {
 }
 
 .ment {
-  line-height: 50px;
   margin-top: 25px;
 }
 
@@ -326,22 +326,29 @@ a {
   text-align: center;
 }
 
+/* '강아지의 날' */
+.tellDogsDay {
+  font-family: "SchoolSafetyAquariumDecor";
+  font-size: 4.5rem;
+  line-height: 85px;
+}
+
 /* '3월 23일 */
 .date {
   font-family: "MapoHongdaeFreedom";
-  font-size: 2rem;
-}
-
-/* '강아지의 날' */
-.day {
-  font-family: "SchoolSafetyAquariumDecor";
-  font-size: 2.7rem;
+  font-size: 2.5rem;
 }
 
 /* '지금까지는 ~ 함께하겠습니다. */
+
+.promiseMent {
+  line-height: 60px;
+}
+
 .promise {
   font-family: "PerpetualSnow";
   font-size: 20px;
+  font-weight: bold;
 }
 
 /* '함께해요', '동물', '입양' ul*/
@@ -357,6 +364,7 @@ a {
   margin-top: 15px;
   font-family: "SchoolSafetyAquariumDecor";
   font-weight: bold;
+  font-size: 21px;
 }
 
 .together > li:hover {
@@ -369,19 +377,19 @@ a {
 
 /* 눈누 호출 */
 @font-face {
-  font-family: "OngleebDaisy";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2508-2@1.0/Ownglyph_daisy-Rg.woff2")
+  font-family: "HsJandari";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2510-2@1.0/HSJandari.woff2")
     format("woff2");
   font-weight: normal;
-  font-style: normal;
+  font-display: swap;
 }
 
 /* '따뜻한 ~ 이야기' */
-.reviewTitle {
-  margin: 150px 0 50px 0;
+.storyTitle {
+  margin: 7.5rem 0px 50px 0px;
   text-align: center;
-  font-size: 50px;
-  font-family: "OngleebDaisy";
+  font-size: 2.5rem;
+  font-family: "HsJandari";
 }
 
 /* 후기 그리드 */
@@ -397,18 +405,24 @@ a {
 /* 전체 그리드 */
 .Grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 반응형 */
-  gap: 20px;
-  padding: 0 20px;
+  grid-template-columns: repeat(4, 320px);
+  justify-content: space-evenly;
+  padding: 40px;
+  row-gap: 55px;
 }
 
 /* 후기 카드 */
 .reviewDiv {
-  background: #fff;
+  width: 320px;
+  height: 400px;
+  background-color: #fff;
   border-radius: 12px;
-  padding: 15px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
   text-align: center;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -416,6 +430,24 @@ a {
   transform: translateY(-5px);
   box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
   cursor: pointer;
+}
+.reviewDiv {
+  width: 300px;
+  height: 350px; /* ✅ 고정 높이로 통일 */
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.reviewDiv:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 /* 후기 이미지 */
@@ -429,18 +461,25 @@ a {
 
 /* 이름 */
 .Name {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #444;
-  margin: 8px 0 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 10px 0 5px;
+  color: #333;
 }
 
 /* 상세 글 */
 .Detail {
-  font-size: 0.95rem;
+  font-size: 1.1rem;
   color: #666;
   line-height: 1.4;
   word-break: keep-all;
+}
+
+.reviewTitle {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-top: 40px;
+  color: #222;
 }
 
 form {
