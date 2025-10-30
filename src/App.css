@@ -373,8 +373,6 @@ a {
   text-decoration: underline;
 }
 
-/* Reservation.jsx */
-
 /* 눈누 호출 */
 @font-face {
   font-family: "HsJandari";
@@ -459,6 +457,8 @@ a {
   margin-bottom: 10px;
 }
 
+/* Reservation.jsx */
+
 /* 이름 */
 .Name {
   font-size: 1rem;
@@ -536,21 +536,27 @@ label {
 .nameTbx,
 .phoneNumTbx {
   width: 250px;
-  height: 25px;
+  height: 30px;
+  padding-left: 5px;
+}
+
+.nameTbx::placeholder,
+.phoneNumTbx::placeholder {
+  font-size: 16px;
 }
 
 /* 셀렉트 박스 */
 #branch-select,
 #species-select {
   width: 180px;
-  height: 30px;
+  height: 34px;
   font-size: 15px;
 }
 
 /* 타임 인풋 */
 .input-time {
   width: 150px;
-  height: 25px;
+  height: 30px;
 }
 
 /* 문의사항 Tbx (textarea)*/
@@ -561,7 +567,7 @@ label {
   padding: 10px;
   border-radius: 6px;
   border: 2px solid #ccc;
-  font-size: 21px;
+  font-size: 15px;
   margin: 0 auto;
 }
 
