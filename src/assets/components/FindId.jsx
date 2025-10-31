@@ -19,6 +19,12 @@ const FindId = () => {
             className="findId-mailTbx"
           ></input>
           <br />
+          <input
+            type="text"
+            placeholder="이름을 입력해 주세요"
+            className="findId-nameTbx"
+          ></input>
+          <br />
 
           <button className="findIdBtn">아이디 찾기</button>
         </div>

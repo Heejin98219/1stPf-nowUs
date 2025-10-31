@@ -15,17 +15,22 @@ const FindPw = () => {
           <br />
           <input
             type="text"
-            placeholder="이메일을 입력해 주세요"
+            placeholder="아이디를 입력해 주세요"
             className="findPw-mailTbx"
           ></input>
           <br />
           <input
             type="text"
-            placeholder="아이디를 입력해 주세요"
+            placeholder="비밀번호를 입력해 주세요"
             className="findPw-idTbx"
           ></input>
           <br />
-
+          <input
+            type="text"
+            placeholder="비밀번호를 입력해 주세요"
+            className="findPw-idTbx"
+          ></input>
+          <br />
           <button className="findPwBtn">비밀번호 찾기</button>
         </div>
       </div>

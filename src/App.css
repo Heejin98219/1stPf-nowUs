@@ -678,6 +678,8 @@ label {
 .join-idTbx,
 .join-idTbx,
 .join-idTbx,
+.join-telTbx,
+.join-pwHintTbx,
 .findId-nameTbx,
 .findId-mailTbx,
 .findPw-nameTbx,
@@ -692,7 +694,9 @@ label {
 /* 제일 하단 텍스트 박스 */
 .login-pwTbx,
 .join-idTbx,
+.join-telTbx,
 .findId-mailTbx,
+.join-pwHintTbx,
 .findPw-mailTbx,
 .findPw-idTbx {
   margin-top: 15px;
