@@ -1,94 +1,34 @@
-import { useState } from "react";
-import { supabase } from "../../supabaseClient";
-
 const Join = () => {
-  const [name, setName] = useState("");
-  const [userId, setUserId] = useState("");
-  const [tel, setTel] = useState("");
-  const [email, setEmail] = useState("");
-  const [pwHint, setPwHint] = useState("");
-  const [password, setPassword] = useState("");
-  const [passwordRe, setPasswordRe] = useState("");
-
-  const handleJoin = async () => {
-    if (password !== passwordRe) {
-      alert("비밀번호가 일치하지 않습니다");
-      return;
-    }
-
-    const { data, error } = await supabase.auth.signUp({
-      email: email,
-      password: password,
-    });
-
-    if (error) {
-      alert("회원가입 실패: " + error.message);
-      return;
-    }
-
-    const { data: userData, error: userError } = await supabase
-      .from("users")
-      .insert([{ id: email, name, tel, pwHint, created_at: new Date() }]);
-
-    if (userError) {
-      alert("테이블 데이터 추가 실패: " + userError.message);
-      return;
-    }
-
-    alert("회원가입 완료!");
-  };
-
   return (
     <div>
       <h1 className="title">회원가입</h1>
       <div className="inputs">
+        <input placeholder="이름을 입력해 주세요" className="join-nameTbx" />
+        <br />
+        <input placeholder="아이디를 입력해 주세요" className="join-idTbx" />
+        <br />
+        <input placeholder="전화번호를 입력해 주세요" className="join-telTbx" />
+        <br />
+        <input placeholder="이메일을 입력해 주세요" className="join-emailTbx" />
+        <br />
         <input
-          placeholder="이름"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
+          placeholder="비밀번호 힌트를 입력해 주세요"
+          className="join-pwHintTbx"
         />
         <br />
         <input
-          placeholder="아이디"
-          value={userId}
-          onChange={(e) => setUserId(e.target.value)}
-        />
-        <br />
-        <input
-          placeholder="전화번호"
-          value={tel}
-          onChange={(e) => setTel(e.target.value)}
-        />
-        <br />
-        <input
-          placeholder="이메일"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <br />
-        <input
-          placeholder="비밀번호 힌트"
-          value={pwHint}
-          onChange={(e) => setPwHint(e.target.value)}
-        />
-        <br />
-        <input
-          placeholder="비밀번호"
+          placeholder="비밀번호를 입력해 주세요"
           type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          className="join-pwTbx"
         />
         <br />
         <input
-          placeholder="비밀번호 확인"
+          placeholder="비밀번호를 다시 입력해 주세요"
           type="password"
-          value={passwordRe}
-          onChange={(e) => setPasswordRe(e.target.value)}
+          className="join-pwTbx2"
         />
         <br />
-        <button className="joinBtn" onClick={handleJoin}>
-          회원가입
-        </button>
+        <button className="joinBtn">회원가입</button>
       </div>
     </div>
   );
