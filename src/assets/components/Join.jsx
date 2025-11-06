@@ -9,7 +9,6 @@ const Join = () => {
   const [hint, setHint] = useState("");
   const [pw, setPw] = useState("");
 
-  // ✅ async 추가!
   const checkBlank = async () => {
     const inputs = {
       이름: name,
@@ -20,7 +19,6 @@ const Join = () => {
       비밀번호: pw,
     };
 
-    // 비어 있는 칸 확인
     for (const key in inputs) {
       if (inputs[key] === "") {
         alert(`${key}를 입력해 주세요`);
@@ -28,8 +26,7 @@ const Join = () => {
       }
     }
 
-    // Supabase에 데이터 저장
-    const { error } = await supabase.from("users").insert({
+    const { data, error } = await supabase.from("users").insert({
       name: name,
       user_id: id,
       email: email,
@@ -39,10 +36,10 @@ const Join = () => {
     });
 
     if (error) {
-      alert("저장 실패 😢");
+      alert("회원가입에 실패하였습니다");
       console.log(error);
     } else {
-      alert("회원가입 성공 🎉");
+      alert("회원가입이 완료되었습니다");
       setName("");
       setId("");
       setEmail("");
