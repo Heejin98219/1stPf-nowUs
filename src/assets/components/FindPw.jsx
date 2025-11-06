@@ -27,6 +27,18 @@ const FindPw = () => {
           <br />
           <input
             type="text"
+            placeholder="비밀번호 힌트를 입력해 주세요"
+            className="findPw-idTbx"
+          ></input>
+          <br />
+          <input
+            type="text"
+            placeholder="비밀번호를 입력해 주세요"
+            className="findPw-idTbx"
+          ></input>
+          <br />
+          <input
+            type="text"
             placeholder="비밀번호를 입력해 주세요"
             className="findPw-idTbx"
           ></input>

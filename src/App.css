@@ -681,7 +681,8 @@ label {
 .join-pwTbx,
 .join-pwTbx2,
 .findId-nameTbx,
-.findId-mailTbx,
+.findId-telTbx,
+.findId-emailTbx,
 .findPw-nameTbx,
 .findPw-mailTbx,
 .findPw-idTbx {
@@ -699,7 +700,8 @@ label {
 .join-pwHintTbx,
 .join-pwTbx,
 .join-pwTbx2,
-.findId-mailTbx,
+.findId-emailTbx,
+.findId-telTbx,
 .findPw-mailTbx,
 .findPw-idTbx {
   margin-top: 15px;

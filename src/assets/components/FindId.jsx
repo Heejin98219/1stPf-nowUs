@@ -15,14 +15,14 @@ const FindId = () => {
           <br />
           <input
             type="text"
-            placeholder="이메일을 입력해 주세요"
-            className="findId-mailTbx"
+            placeholder="전화번호를 입력해 주세요"
+            className="findId-telTbx"
           ></input>
           <br />
           <input
             type="text"
-            placeholder="이름을 입력해 주세요"
-            className="findId-nameTbx"
+            placeholder="이메일을 입력해 주세요"
+            className="findId-emailTbx"
           ></input>
           <br />
 
