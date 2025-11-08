@@ -4,8 +4,10 @@ const slides = [
   {
     content: (
       <>
+        {/* 상단 메뉴입니다 */}
         💰
         <span
+          className="money"
           style={{
             fontWeight: "bold",
             color: "#000",
@@ -153,7 +155,7 @@ export default function Carousel() {
         style={{
           display: "flex",
           transition: isTransitioning ? "transform 1s ease" : "none",
-          transform: `translateX(${(slides.length - 1 - index) * -100}%)`, // 오른쪽으로 이동 효과
+          transform: `translateX(${(slides.length - 1 - index) * -100}%)`,
         }}
       >
         {slides.map((slide, i) => (

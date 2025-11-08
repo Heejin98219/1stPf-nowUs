@@ -1,3 +1,10 @@
+{
+  /* 입양 후기입니다 */
+}
+
+{
+  /* 입양 후기 데이터 입니다 */
+}
 const reviews = [
   {
     id: 1,
@@ -44,13 +51,13 @@ const reviews = [
   {
     id: 8,
     img: "https://gnews.gg.go.kr/OP_UPDATA/UP_DATA/_FILEZ/202404/20240426012358819526104.jpg",
-    name: "",
+    name: "dogmom",
     text: "눈 마주칠 때마다 녹아내릴 거 같아요ㅠㅠ",
   },
   {
     id: 9,
     img: "https://cdn.dailyvet.co.kr/wp-content/uploads/2024/12/05205858/20241205ceva_experts2.jpg",
-    name: "",
+    name: "iloveanimals",
     text: "입양, 정말 잘 한 거 같아요!",
   },
   {
@@ -124,7 +131,6 @@ const reviews = [
 const Review = () => {
   return (
     <>
-      {/* 입양 후기 입니다 */}
       <div>
         <h2 className="storyTitle">따뜻한 가족들을 만난 친구들의 이야기</h2>
         <div className="Grid">

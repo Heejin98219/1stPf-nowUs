@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { supabase } from "../../supabaseClient";
-// import { useAsyncError } from "react-router-dom";
 import { v4 as uuidv4 } from "uuid";
 
 const Join = () => {
@@ -11,8 +10,12 @@ const Join = () => {
   const [hint, setHint] = useState("");
   const [pw, setPw] = useState("");
   const [pw2, setPw2] = useState("");
+  const [loading, setLoading] = useState(false); // ✅ 추가
 
   const checkBlank = async () => {
+    if (loading) return; // 이미 요청 중이면 무시
+    setLoading(true);
+
     const inputs = {
       이름: name,
       아이디: id,
@@ -25,15 +28,18 @@ const Join = () => {
     for (const key in inputs) {
       if (inputs[key] === "") {
         alert(`${key}를 입력해 주세요`);
+        setLoading(false); // 중간에 반환 시 로딩 해제
         return;
       }
     }
 
     if (pw !== pw2) {
       alert("비밀번호를 다시 확인해 주세요");
+      setLoading(false); // 로딩 해제
       return;
     }
 
+    // 1️⃣ Auth 회원가입
     const { data: authData, error: authError } = await supabase.auth.signUp({
       email: email,
       password: pw,
@@ -42,9 +48,11 @@ const Join = () => {
     if (authError) {
       alert("회원가입에 실패했습니다");
       console.log(authError);
+      setLoading(false);
       return;
     }
 
+    // 2️⃣ 테이블(users)에 정보 저장
     const { data: tableData, error: tableError } = await supabase
       .from("users")
       .insert({
@@ -53,12 +61,12 @@ const Join = () => {
         email,
         tel,
         hint,
-        auth_id: authData.user.id,
+        auth_id: authData.user?.id, // 안전하게 optional chaining
       });
 
     if (tableError) {
       alert("회원가입(테이블)에 실패했습니다");
-      console.log(tableError);
+      console.log("Table insert error:", tableError);
     } else {
       alert("회원가입 완료!");
       setName("");
@@ -69,6 +77,8 @@ const Join = () => {
       setPw("");
       setPw2("");
     }
+
+    setLoading(false); // 모든 로직 끝나면 로딩 해제
   };
 
   return (
@@ -126,8 +136,8 @@ const Join = () => {
           onChange={(e) => setPw2(e.target.value)}
         />
         <br />
-        <button className="joinBtn" onClick={checkBlank}>
-          회원가입
+        <button className="joinBtn" onClick={checkBlank} disabled={loading}>
+          {loading ? "가입 중..." : "회원가입"}
         </button>
       </div>
     </div>

@@ -1,3 +1,5 @@
+/* reset css */
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -128,25 +130,6 @@ table {
   border-spacing: 0;
 }
 
-/* Congrats.jsx */
-/* 오픈 축하 문구 */
-.open {
-  background-image: url("/image/congrats.jpg");
-  background-size: contain;
-  color: black;
-  font-size: 2.5rem;
-  text-align: center;
-  height: 100px;
-  font-weight: bold;
-  font-family: "PyeongchangPeace";
-  padding-top: 2rem;
-  margin-bottom: 3.5rem;
-  cursor: pointer;
-}
-.open > .openTxt {
-  padding: 10px;
-}
-
 /* 눈누 호출 */
 @font-face {
   font-family: "PyeongchangPeace";
@@ -164,67 +147,7 @@ table {
   font-display: swap;
 }
 
-/* TopMenu.jsx */
-/* 상단 메뉴 전체 (ul) */
-.TopMenu {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 0 auto;
-  width: 75%;
-}
-/* 메인 메뉴 */
-.TopMenu > li {
-  display: inline-block;
-  font-weight: bold;
-  font-size: 25px;
-  font-family: "Taenada";
-  margin-bottom: 3rem;
-}
-.TopMenu > li:hover {
-  cursor: pointer;
-}
-
-.mainMenu:hover {
-  cursor: pointer;
-
-  .subMenu {
-    color: black;
-    opacity: 100;
-  }
-}
-
-/* 서브 메뉴 */
-.subMenu {
-  border: 2px solid #aaa;
-  font-size: 1rem;
-  font-family: "Taenada";
-  font-size: 20px;
-  line-height: 30px;
-  padding: 7px 5px 0 5px;
-  box-shadow: 5px 5px 5px #aaa;
-  opacity: 0;
-}
-
-.subMenu > li:hover {
-  cursor: pointer;
-  color: #ff6666;
-  text-decoration: underline;
-}
-
-a {
-  color: black;
-  text-decoration: none;
-}
-
-.TopMenu a:hover {
-  color: #ff6666;
-  text-decoration: underline;
-}
-
-/* Carousel.jsx  */
-/* 눈누 호출 */
 @font-face {
-  /* 첫번째 slide */
   font-family: "ChusaSarang";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2205@1.0/ChusaLove.woff2")
     format("woff2");
@@ -233,7 +156,6 @@ a {
 }
 
 @font-face {
-  /* 마지막 슬라이드 */
   font-family: "YeogiOttaeJalnan";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff")
     format("woff");
@@ -242,7 +164,6 @@ a {
 }
 
 @font-face {
-  /* 두번째, 세번째, 네번째 슬라이드 */
   font-family: "FounderYooGeonWook";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2112@1.0/establishRetrosansOTF.woff")
     format("woff");
@@ -250,7 +171,6 @@ a {
   font-display: swap;
 }
 
-/* 다섯번째 슬라이드 */
 @font-face {
   font-family: "GanaChocolate";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ghanachoco.woff")
@@ -259,27 +179,6 @@ a {
   font-display: swap;
 }
 
-/* 케러셀 전체  */
-.slider-container {
-  position: relative;
-  height: 255px;
-  overflow: hidden;
-  border: 2px solid black;
-}
-
-.slider-track {
-  display: flex;
-  height: 100%;
-}
-
-.slide {
-  flex: 0 0 100%;
-  display: flex;
-  cursor: pointer;
-}
-
-/* DogsDay.jsx */
-/* 눈누 호출 */
 @font-face {
   font-family: "SchoolSafetyAquariumDecor";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2508-2@1.0/HakgyoansimEohangkkumigiB.woff2")
@@ -304,14 +203,159 @@ a {
   font-style: normal;
 }
 
-/* 강아지의 날 전체 div */
+@font-face {
+  font-family: "HsJandari";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2510-2@1.0/HSJandari.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Escoredream";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-9Black.woff")
+    format("woff");
+  font-weight: 900;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "OngleIpSeaBreeze";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2510-1@1.0/Ownglyph_the_sea_breeze-Rg.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-display: swap;
+}
+
+/* a태그 */
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/* label */
+label {
+  margin: 0 15px 0px 25px;
+}
+
+/* Congrats.jsx */
+.open {
+  background-image: url("/image/congrats.jpg");
+  background-size: contain;
+  color: black;
+  font-size: 2.5rem;
+  text-align: center;
+  height: 100px;
+  font-weight: bold;
+  font-family: "PyeongchangPeace";
+  padding-top: 2rem;
+  margin-bottom: 3.5rem;
+  cursor: pointer;
+}
+.open > .openTxt {
+  padding: 10px;
+}
+
+/* TopMenu.jsx */
+/* 전체 메뉴 */
+.TopMenu {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  width: 75%;
+}
+
+/* 각 메인 메뉴 */
+.TopMenu > li {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 25px;
+  font-family: "Taenada";
+  margin-bottom: 3rem;
+}
+
+/* 메인 메뉴 a태그 hover */
+.TopMenu a:hover {
+  color: #ff6666;
+  text-decoration: underline;
+}
+
+/* 각 메인 메뉴 hover */
+.TopMenu > li:hover {
+  cursor: pointer;
+}
+
+/* 각 메인 메뉴 hover */
+.mainMenu:hover {
+  cursor: pointer;
+
+  .subMenu {
+    color: black;
+    opacity: 100;
+  }
+}
+
+/* 서브 메뉴 */
+.subMenu {
+  border: 2px solid #aaa;
+  font-size: 1rem;
+  font-family: "Taenada";
+  font-size: 20px;
+  line-height: 30px;
+  padding: 7px 5px 0 5px;
+  box-shadow: 5px 5px 5px #aaa;
+  opacity: 0;
+}
+
+/* 각 서브 메뉴 hover */
+.subMenu > li:hover {
+  cursor: pointer;
+  color: #ff6666;
+  text-decoration: underline;
+}
+
+/* Carousel.jsx  */
+/* 전체 캐러셀 */
+.slider-container {
+  position: relative;
+  height: 255px;
+  overflow: hidden;
+  border: 2px solid black;
+}
+
+/* 전체 캐러셀 */
+.slider-track {
+  display: flex;
+  height: 100%;
+}
+
+/* 캐러셀의 각 슬라이드 */
+.slide {
+  flex: 0 0 100%;
+  display: flex;
+  cursor: pointer;
+}
+
+/* DogsDay.jsx */
+/* 눈누 호출 */
+
+/* (강아지의 날)전체 div */
 .dogsDay {
   margin: 0 auto;
   text-align: center;
 }
 
+/* 텍스트 전체 div */
 .ment {
   margin-top: 25px;
+  text-align: center;
+}
+
+/* '전체 텍스트 div '*/
+.promise {
+  font-family: "PerpetualSnow";
+  font-size: 20px;
+  font-weight: bold;
 }
 
 /* 강아지 사진 */
@@ -320,10 +364,6 @@ a {
   height: 660px;
   background-size: cover;
   margin: 10rem 0 5rem 0rem;
-}
-
-.ment {
-  text-align: center;
 }
 
 /* '강아지의 날' */
@@ -340,15 +380,8 @@ a {
 }
 
 /* '지금까지는 ~ 함께하겠습니다. */
-
 .promiseMent {
   line-height: 60px;
-}
-
-.promise {
-  font-family: "PerpetualSnow";
-  font-size: 20px;
-  font-weight: bold;
 }
 
 /* '함께해요', '동물', '입양' ul*/
@@ -367,37 +400,20 @@ a {
   font-size: 21px;
 }
 
+/* '함께해요', '동물', '입양' 각 li hover */
 .together > li:hover {
   cursor: pointer;
   color: #ff6666;
   text-decoration: underline;
 }
 
-/* 눈누 호출 */
-@font-face {
-  font-family: "HsJandari";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2510-2@1.0/HSJandari.woff2")
-    format("woff2");
-  font-weight: normal;
-  font-display: swap;
-}
-
+/* Review.jsx */
 /* '따뜻한 ~ 이야기' */
 .storyTitle {
   margin: 7.5rem 0px 50px 0px;
   text-align: center;
   font-size: 2.5rem;
   font-family: "HsJandari";
-}
-
-/* 후기 그리드 */
-/* 제목 */
-.title {
-  font-size: 1.8rem;
-  text-align: center;
-  margin-bottom: 30px;
-  font-weight: bold;
-  color: #333;
 }
 
 /* 전체 그리드 */
@@ -409,7 +425,7 @@ a {
   row-gap: 55px;
 }
 
-/* 후기 카드 */
+/* 이미지 아이디, 후기를 포함한 div */
 .reviewDiv {
   width: 320px;
   height: 400px;
@@ -424,14 +440,17 @@ a {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* 그리드 내 각 div hover */
 .reviewDiv:hover {
   transform: translateY(-5px);
   box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
   cursor: pointer;
 }
+
+/* 이미지 아이디, 후기를 포함한 div */
 .reviewDiv {
   width: 300px;
-  height: 350px; /* ✅ 고정 높이로 통일 */
+  height: 350px;
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
@@ -443,6 +462,7 @@ a {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+/* 이미지 아이디, 후기를 포함한 div */
 .reviewDiv:hover {
   transform: translateY(-5px);
   box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
@@ -457,8 +477,7 @@ a {
   margin-bottom: 10px;
 }
 
-/* Reservation.jsx */
-
+/* Reservation.jsx 보류 */
 /* 이름 */
 .Name {
   font-size: 1rem;
@@ -528,10 +547,6 @@ textarea {
   border: 2px solid #ff9999;
 }
 
-label {
-  margin: 0 15px 0px 25px;
-}
-
 /* 인풋*/
 .nameTbx,
 .phoneNumTbx {
@@ -578,13 +593,15 @@ label {
 }
 
 /* '개인정보취급방침', 
-'이메일무단수집거부' */
+'이메일무단수집거부' li */
 .notice-div {
   display: flex;
   justify-content: space-between;
   width: 25%;
 }
 
+/* '개인정보취급방침', 
+'이메일무단수집거부' ul */
 .notice-ul {
   display: flex;
   justify-content: space-between;
@@ -593,19 +610,24 @@ label {
   list-style: none;
 }
 
+/* '이메일무단수집거부' */
 .notice-ul > li:last-child {
   padding-left: 11px;
 }
 
+/* '개인정보취급방침', 
+'이메일무단수집거부' li hover */
 .notice-ul > li:hover {
   cursor: pointer;
   text-decoration: underline;
 }
 
+/* 회사 정보 div*/
 .companyInfo-div {
   margin: 18px 0 0 -26px;
 }
 
+/* 회사 정보 ul */
 .companyInfo-ul {
   /* display: flex;
   justify-content: space-evenly;
@@ -614,6 +636,7 @@ label {
   line-height: 25px;
 }
 
+/* 각 회사 정보 */
 .companyInfo-ul > li {
   display: inline-block;
   text-align: center;
@@ -621,6 +644,7 @@ label {
 }
 
 /* Sns.jsx */
+/* sns 로고 div */
 .sns-Div {
   display: flex;
   justify-content: space-between;
@@ -628,44 +652,48 @@ label {
   margin: 0 0 25px 0;
 }
 
+/* sns 로고 ul */
 .snsIcons {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+/* 각 sns로고 */
 .snsIcon {
   color: #ccc;
   display: inline-block;
 }
 
+/* 마지막 sns 로고  */
+/* (스레드) */
 .snsIcon:last-child {
   margin: 0 20px 3px 0;
 }
 
+/* sns 로고 ul hover */
 .snsIcon:hover {
   cursor: pointer;
   color: #aaa;
 }
 
 /* Login.jsx */
-/* 눈누 호출 */
-@font-face {
-  font-family: "Escoredream";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-9Black.woff")
-    format("woff");
-  font-weight: 900;
-  font-display: swap;
-}
-
-/* '로그인', 문구 */
+/* 
+'로그인'
+'회원가입',
+'아이디 찾기',
+'비밀번호 찾기'
+*/
 .title {
   font-size: 65px;
   font-family: "Escoredream";
   margin: 10rem 0 5rem 0;
+  text-align: center;
 }
 
-/* 텍스트 박스, 버튼 등*/
+/* 
+각 페이지 인풋들
+(텍스트 박스, 버튼 등)*/
 .inputs {
   text-align: center;
 }
@@ -693,7 +721,7 @@ label {
   padding: 5px 6px 5px 6px;
 }
 
-/* 제일 하단 텍스트 박스 */
+/* 최하단 텍스트 박스 */
 .login-pwTbx,
 .join-idTbx,
 .join-telTbx,
@@ -723,6 +751,7 @@ label {
   font-weight: bold;
 }
 
+/* 버튼 hover */
 .loginBtn:hover,
 .findIdBtn:hover,
 .findPwBtn:hover,
@@ -733,14 +762,6 @@ label {
 }
 
 /* MakeHappy.jsx */
-/* 눈누 호출 */
-@font-face {
-  font-family: "OngleIpSeaBreeze";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/2510-1@1.0/Ownglyph_the_sea_breeze-Rg.woff2")
-    format("woff2");
-  font-weight: normal;
-  font-display: swap;
-}
 .ourTurn {
   font-family: "OngleIpSeaBreeze";
   text-align: center;
@@ -749,6 +770,12 @@ label {
   line-height: 80px;
 }
 
+/* 
+로그인 화면의
+'회원가입',
+'아이디 찾기',
+'비밀번호 찾기'
+*/
 .extraMenu {
   margin-top: 15px;
   display: inline-block;
@@ -759,6 +786,13 @@ label {
     cursor: pointer;
   }
 }
+
+/* 
+로그인 화면의
+'회원가입',
+'아이디 찾기',
+'비밀번호 찾기' hover
+*/
 .extraMenu > li:hover {
   font-weight: bold;
 }
