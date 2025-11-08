@@ -11,18 +11,21 @@ const FindId = () => {
             type="text"
             placeholder="이름을 입력해 주세요"
             className="findId-nameTbx"
+            readOnly
           ></input>
           <br />
           <input
             type="text"
             placeholder="전화번호를 입력해 주세요"
             className="findId-telTbx"
+            readOnly
           ></input>
           <br />
           <input
             type="text"
             placeholder="이메일을 입력해 주세요"
             className="findId-emailTbx"
+            readOnly
           ></input>
           <br />
 

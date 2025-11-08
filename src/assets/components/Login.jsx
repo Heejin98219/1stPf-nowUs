@@ -13,6 +13,7 @@ const Login = () => {
             type="text"
             placeholder="아이디를 입력해 주세요"
             className="login-idTbx"
+            readOnly
           />
           <br />
 
@@ -22,11 +23,14 @@ const Login = () => {
             type="password"
             placeholder="비밀번호를 입력해 주세요"
             className="login-pwTbx"
+            readOnly
           />
           <br />
 
           {/* 로그인 버튼 */}
-          <button className="loginBtn">로그인</button>
+          <button className="loginBtn" readOnly>
+            로그인
+          </button>
 
           {/* 추가 메뉴 */}
           <div>
