@@ -7,6 +7,9 @@ const TopMenu = () => {
       <div>
         <div>
           <ul className="TopMenu">
+            <li>
+              <img src="./public/image/nowWeLogo.jpg"></img>
+            </li>
             <li className="mainMenu">
               소개
               <ul className="subMenu">
