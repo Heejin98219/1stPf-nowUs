@@ -7,6 +7,7 @@ import Reservation from "./Reservation";
 import Information from "./Infomation";
 import Sns from "./Sns";
 import MakeHappy from "./MakeHappy";
+import ScrollTopBtn from "./ScrollTopBtn";
 
 const Components = () => {
   return (
@@ -18,6 +19,7 @@ const Components = () => {
       <DogsDay />
       <Review />
       <Reservation />
+      <ScrollTopBtn />
       <MakeHappy />
       <Information />
       <Sns />

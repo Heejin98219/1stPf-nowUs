@@ -1,4 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 const ScrollTopBtn = () => {
   const ScrollUp = () => {
@@ -7,9 +8,11 @@ const ScrollTopBtn = () => {
 
   return (
     <>
-      {/* 상단 올라가는 버튼입니다 */}
+      {/* 상단으로 이동하는 버튼입니다 */}
       <div>
-        <button><FontAwesomeIcon icon={faArrowUp} size="2xl"></button>
+        <button onClick={ScrollUp}>
+          <FontAwesomeIcon icon={faArrowUp} size="2xl"></FontAwesomeIcon>
+        </button>
       </div>
     </>
   );
