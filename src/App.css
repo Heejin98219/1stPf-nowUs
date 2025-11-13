@@ -233,7 +233,7 @@ a {
   text-decoration: none;
 }
 
-/* label */
+/* 레이블 */
 label {
   margin: 0 15px 0px 25px;
 }
@@ -257,61 +257,59 @@ label {
 }
 
 /* TopMenu.jsx */
+/* 전체 메뉴 감싸는 div */
+.TopMenu-div {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: center;
+}
+
 /* 전체 메뉴 */
 .TopMenu {
   display: flex;
+  align-items: center;
   justify-content: space-evenly;
-  margin: 0 auto;
   width: 75%;
+  height: 150px;
+  list-style: none;
+  padding: 0;
 }
 
-/* 각 메인 메뉴 */
+/* 로고 이미지 */
+.TopMenu > li:first-child img {
+  display: block;
+  height: 2px;
+  width: auto;
+}
+
+/* 메인 메뉴 */
 .TopMenu > li {
-  display: inline-block;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 28px;
   font-family: "Taenada";
-  margin-bottom: 3rem;
+  cursor: pointer;
+  margin-bottom: 100px;
 }
 
-/* 메인 메뉴 a태그 hover */
+/* hover 효과 */
 .TopMenu a:hover {
   color: #ff6666;
   text-decoration: underline;
 }
 
-/* 각 메인 메뉴 hover */
-.TopMenu > li:hover {
-  cursor: pointer;
-}
-
-/* 각 메인 메뉴 hover */
-.mainMenu:hover {
-  cursor: pointer;
-
-  .subMenu {
-    color: black;
-    opacity: 100;
-  }
-}
-
-/* 서브 메뉴 */
+/* 서브메뉴 */
 .subMenu {
-  border: 2px solid #aaa;
-  font-size: 1rem;
-  font-family: "Taenada";
-  font-size: 20px;
+  display: none;
+  position: absolute;
+  list-style: none;
+  padding: 5px;
+  margin-top: 3px;
   line-height: 30px;
-  padding: 7px 5px 0 5px;
-  box-shadow: 5px 5px 5px #aaa;
-  opacity: 0;
+  font-size: 21px;
 }
 
-/* 각 서브 메뉴 hover */
-.subMenu > li:hover {
-  cursor: pointer;
-  color: #ff6666;
-  text-decoration: underline;
+.mainMenu:hover > .subMenu {
+  display: block;
 }
 
 /* Carousel.jsx  */

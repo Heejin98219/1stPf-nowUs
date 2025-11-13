@@ -223,7 +223,7 @@ const Join = () => {
 
   return (
     <div>
-      <h1 className="title">회원가입</h1>
+      <h1 className="title">예약하기</h1>
       <div className="inputs">
         <input
           placeholder="이름"
