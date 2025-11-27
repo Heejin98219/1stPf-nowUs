@@ -10,10 +10,18 @@ const Join = () => {
   const [hint, setHint] = useState("");
   const [pw, setPw] = useState("");
   const [pw2, setPw2] = useState("");
-  const [loading, setLoading] = useState(false); // ✅ 추가
+  const [loading, setLoading] = useState(false);
 
+  // Enter 키 감지 함수
+  const checkEnter = (e) => {
+    if (e.keyCode === 13) {
+      checkBlank();
+    }
+  };
+
+  // 회원가입 함수
   const checkBlank = async () => {
-    if (loading) return; // 이미 요청 중이면 무시
+    if (loading) return;
     setLoading(true);
 
     const inputs = {
@@ -25,21 +33,23 @@ const Join = () => {
       비밀번호: pw,
     };
 
+    // 빈칸 체크
     for (const key in inputs) {
       if (inputs[key] === "") {
         alert(`${key}를 입력해 주세요`);
-        setLoading(false); // 중간에 반환 시 로딩 해제
+        setLoading(false);
         return;
       }
     }
 
+    // 비밀번호 일치 확인
     if (pw !== pw2) {
       alert("비밀번호를 다시 확인해 주세요");
-      setLoading(false); // 로딩 해제
+      setLoading(false);
       return;
     }
 
-    // 1️⃣ Auth 회원가입
+    // supabase Auth 회원가입
     const { data: authData, error: authError } = await supabase.auth.signUp({
       email: email,
       password: pw,
@@ -47,28 +57,26 @@ const Join = () => {
 
     if (authError) {
       alert("회원가입에 실패했습니다");
-      console.log(authError);
       setLoading(false);
       return;
     }
 
-    // 2️⃣ 테이블(users)에 정보 저장
+    // users 테이블에 데이터 저장
     const { data: tableData, error: tableError } = await supabase
       .from("users")
       .insert({
         name,
         user_id: uuidv4(),
-        email,
         tel,
+        email,
         hint,
-        auth_id: authData.user?.id, // 안전하게 optional chaining
+        auth_id: authData.user?.id,
       });
 
     if (tableError) {
-      alert("회원가입(테이블)에 실패했습니다");
-      console.log("Table insert error:", tableError);
+      alert("회원가입에 실패했습니다");
     } else {
-      alert("회원가입 완료!");
+      alert("회원가입이 완료되었습니다");
       setName("");
       setId("");
       setTel("");
@@ -78,7 +86,7 @@ const Join = () => {
       setPw2("");
     }
 
-    setLoading(false); // 모든 로직 끝나면 로딩 해제
+    setLoading(false);
   };
 
   return (
@@ -134,10 +142,11 @@ const Join = () => {
           className="join-pwTbx2"
           value={pw2}
           onChange={(e) => setPw2(e.target.value)}
+          onKeyDown={checkEnter}
         />
         <br />
-        <button className="joinBtn" onClick={checkBlank} disabled={loading}>
-          {loading ? "가입 중..." : "회원가입"}
+        <button className="joinBtn" onClick={checkBlank}>
+          회원가입
         </button>
       </div>
     </div>

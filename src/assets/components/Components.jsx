@@ -8,6 +8,7 @@ import Information from "./Infomation";
 import Sns from "./Sns";
 import MakeHappy from "./MakeHappy";
 import ScrollTopBtn from "./ScrollTopBtn";
+import Copyright from "./Copyright";
 
 const Components = () => {
   return (
@@ -17,12 +18,14 @@ const Components = () => {
       <TopMenu />
       <Carousel />
       <DogsDay />
-      <Review />
-      <Reservation />
       <ScrollTopBtn />
+      <Review />
+
+      <Reservation />
       <MakeHappy />
       <Information />
       <Sns />
+      <Copyright />
     </>
   );
 };
