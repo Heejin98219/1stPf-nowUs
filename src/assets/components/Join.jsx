@@ -15,12 +15,12 @@ const Join = () => {
   // Enter 키 감지 함수
   const checkEnter = (e) => {
     if (e.keyCode === 13) {
-      checkBlank();
+      FuncJoin();
     }
   };
 
-  // 회원가입 함수
-  const checkBlank = async () => {
+  // 회원가입
+  const FuncJoin = async () => {
     if (loading) return;
     setLoading(true);
 
@@ -148,7 +148,7 @@ const Join = () => {
             onKeyDown={checkEnter}
           />
           <br />
-          <button className="joinBtn" onClick={checkBlank}>
+          <button className="joinBtn" onClick={FuncJoin}>
             회원가입
           </button>
         </div>

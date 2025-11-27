@@ -1,38 +1,52 @@
-const FindId = () => {
-  return (
-    <>
-      {/* 아이디 찾기 입니다 */}
-      <div>
-        <div>
-          <h1 className="title">아이디 찾기</h1>
-        </div>
-        <div className="inputs">
-          <input
-            type="text"
-            placeholder="이름을 입력해 주세요"
-            className="findId-nameTbx"
-            readOnly
-          ></input>
-          <br />
-          <input
-            type="text"
-            placeholder="전화번호를 입력해 주세요 ( - 제외)"
-            className="findId-telTbx"
-            readOnly
-          ></input>
-          <br />
-          <input
-            type="text"
-            placeholder="이메일을 입력해 주세요"
-            className="findId-emailTbx"
-            readOnly
-          ></input>
-          <br />
+import { useState } from "react";
+import { supabase } from "../../supabaseClient";
 
-          <button className="findIdBtn">아이디 찾기</button>
-        </div>
-      </div>
-    </>
+const FindId = ({ onIdFound }) => {
+  const [name, setName] = useState("");
+  const [tel, setTel] = useState("");
+  const [email, setEmail] = useState("");
+
+  const FuncFindId = async () => {
+    if (!name || !tel || !email) {
+      alert("모든 필드를 입력해 주세요");
+      return;
+    }
+
+    const { data, error } = await supabase
+      .from("users")
+      .select("id")
+      .eq("name", name)
+      .eq("tel", tel)
+      .eq("email", email)
+      .single();
+
+    if (error || !data) {
+      alert("존재하지 않는 정보입니다");
+    } else {
+      onIdFound(data.id);
+    }
+  };
+
+  return (
+    <div>
+      <h1>아이디 찾기</h1>
+      <input
+        placeholder="이름"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+      <input
+        placeholder="전화번호"
+        value={tel}
+        onChange={(e) => setTel(e.target.value)}
+      />
+      <input
+        placeholder="이메일"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      <button onClick={FuncFindId}>아이디 찾기</button>
+    </div>
   );
 };
 
