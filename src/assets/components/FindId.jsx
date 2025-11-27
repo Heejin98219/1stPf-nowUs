@@ -16,7 +16,7 @@ const FindId = () => {
           <br />
           <input
             type="text"
-            placeholder="전화번호를 입력해 주세요"
+            placeholder="전화번호를 입력해 주세요 ( - 제외)"
             className="findId-telTbx"
             readOnly
           ></input>

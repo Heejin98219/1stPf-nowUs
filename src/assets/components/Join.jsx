@@ -66,11 +66,12 @@ const Join = () => {
       .from("users")
       .insert({
         name,
-        user_id: uuidv4(),
+        id: id,
         tel,
         email,
         hint,
         auth_id: authData.user?.id,
+        user_id: uuidv4(),
       });
 
     if (tableError) {
@@ -90,66 +91,69 @@ const Join = () => {
   };
 
   return (
-    <div>
-      <h1 className="title">회원가입</h1>
-      <div className="inputs">
-        <input
-          placeholder="이름을 입력해 주세요"
-          className="join-nameTbx"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <br />
-        <input
-          placeholder="아이디를 입력해 주세요"
-          className="join-idTbx"
-          value={id}
-          onChange={(e) => setId(e.target.value)}
-        />
-        <br />
-        <input
-          placeholder="전화번호를 입력해 주세요"
-          className="join-telTbx"
-          value={tel}
-          onChange={(e) => setTel(e.target.value)}
-        />
-        <br />
-        <input
-          placeholder="이메일을 입력해 주세요"
-          className="join-emailTbx"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <br />
-        <input
-          placeholder="비밀번호 힌트를 입력해 주세요"
-          className="join-pwHintTbx"
-          value={hint}
-          onChange={(e) => setHint(e.target.value)}
-        />
-        <br />
-        <input
-          placeholder="비밀번호를 입력해 주세요"
-          type="password"
-          className="join-pwTbx"
-          value={pw}
-          onChange={(e) => setPw(e.target.value)}
-        />
-        <br />
-        <input
-          placeholder="비밀번호를 다시 입력해 주세요"
-          type="password"
-          className="join-pwTbx2"
-          value={pw2}
-          onChange={(e) => setPw2(e.target.value)}
-          onKeyDown={checkEnter}
-        />
-        <br />
-        <button className="joinBtn" onClick={checkBlank}>
-          회원가입
-        </button>
+    <>
+      {/* 회원가입 입니다 */}
+      <div>
+        <h1 className="title">회원가입</h1>
+        <div className="inputs">
+          <input
+            placeholder="이름을 입력해 주세요"
+            className="join-nameTbx"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <br />
+          <input
+            placeholder="아이디를 입력해 주세요"
+            className="join-idTbx"
+            value={id}
+            onChange={(e) => setId(e.target.value)}
+          />
+          <br />
+          <input
+            placeholder="전화번호를 입력해 주세요 ( - 제외)"
+            className="join-telTbx"
+            value={tel}
+            onChange={(e) => setTel(e.target.value)}
+          />
+          <br />
+          <input
+            placeholder="이메일을 입력해 주세요"
+            className="join-emailTbx"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <br />
+          <input
+            placeholder="비밀번호 힌트를 입력해 주세요"
+            className="join-pwHintTbx"
+            value={hint}
+            onChange={(e) => setHint(e.target.value)}
+          />
+          <br />
+          <input
+            placeholder="비밀번호를 입력해 주세요"
+            type="password"
+            className="join-pwTbx"
+            value={pw}
+            onChange={(e) => setPw(e.target.value)}
+          />
+          <br />
+          <input
+            placeholder="비밀번호를 다시 입력해 주세요"
+            type="password"
+            className="join-pwTbx2"
+            value={pw2}
+            onChange={(e) => setPw2(e.target.value)}
+            onKeyDown={checkEnter}
+          />
+          <br />
+          <button className="joinBtn" onClick={checkBlank}>
+            회원가입
+          </button>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
