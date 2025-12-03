@@ -24,6 +24,7 @@ const Join = () => {
     if (loading) return;
     setLoading(true);
 
+    // 빈칸 체크
     const inputs = {
       이름: name,
       아이디: id,
@@ -33,7 +34,6 @@ const Join = () => {
       비밀번호: pw,
     };
 
-    // 빈칸 체크
     for (const key in inputs) {
       if (inputs[key] === "") {
         alert(`${key}를 입력해 주세요`);

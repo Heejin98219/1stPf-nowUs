@@ -1,20 +1,40 @@
 import { useState } from "react";
 import { supabase } from "../../supabaseClient";
+import ShowId from "./ShowId";
 
-const FindId = ({ onIdFound }) => {
+const FindId = () => {
   const [name, setName] = useState("");
   const [tel, setTel] = useState("");
   const [email, setEmail] = useState("");
+  const [newPage, setNewPage] = useState(false);
+  const [foundId, setFoundId] = useState("");
+  const [foundName, setFoundName] = useState("");
 
+  // Enter 키 감지 함수
+  const checkEnter = (e) => {
+    if (e.key === "Enter") {
+      FuncFindId();
+    }
+  };
+
+  // 아이디 찾기
   const FuncFindId = async () => {
-    if (!name || !tel || !email) {
-      alert("모든 필드를 입력해 주세요");
-      return;
+    const inputs = {
+      이름: name,
+      전화번호: tel,
+      이메일: email,
+    };
+
+    for (const key in inputs) {
+      if (inputs[key] === "") {
+        alert(`${key}를 입력해 주세요`);
+        return;
+      }
     }
 
     const { data, error } = await supabase
       .from("users")
-      .select("id")
+      .select("id, name")
       .eq("name", name)
       .eq("tel", tel)
       .eq("email", email)
@@ -23,30 +43,55 @@ const FindId = ({ onIdFound }) => {
     if (error || !data) {
       alert("존재하지 않는 정보입니다");
     } else {
-      onIdFound(data.id);
+      setFoundId(data.id);
+      setFoundName(data.name);
+      setNewPage(true);
     }
   };
 
+  if (newPage) {
+    return (
+      <ShowId
+        foundId={foundId}
+        foundName={foundName}
+        goBack={() => setNewPage(false)}
+      />
+    );
+  }
+
   return (
-    <div>
-      <h1>아이디 찾기</h1>
-      <input
-        placeholder="이름"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      />
-      <input
-        placeholder="전화번호"
-        value={tel}
-        onChange={(e) => setTel(e.target.value)}
-      />
-      <input
-        placeholder="이메일"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <button onClick={FuncFindId}>아이디 찾기</button>
-    </div>
+    <>
+      <div>
+        <h1 className="title">아이디 찾기</h1>
+        <div className="inputs">
+          <input
+            placeholder="이름"
+            className="findId-nameTbx"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+          />
+          <br />
+          <input
+            placeholder="전화번호"
+            className="findId-telTbx"
+            value={tel}
+            onChange={(e) => setTel(e.target.value)}
+          />
+          <br />
+          <input
+            placeholder="이메일"
+            className="findId-emailTbx"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            onKeyDown={checkEnter}
+          />
+          <br />
+          <button className="findIdBtn" onClick={FuncFindId}>
+            아이디 찾기
+          </button>
+        </div>
+      </div>
+    </>
   );
 };
 
