@@ -9,6 +9,7 @@ const FindId = () => {
   const [newPage, setNewPage] = useState(false);
   const [foundId, setFoundId] = useState("");
   const [foundName, setFoundName] = useState("");
+  const [foundTel, setFoundTel] = useState("");
 
   // Enter 키 감지 함수
   const checkEnter = (e) => {
@@ -34,7 +35,7 @@ const FindId = () => {
 
     const { data, error } = await supabase
       .from("users")
-      .select("id, name")
+      .select("id, name, tel")
       .eq("name", name)
       .eq("tel", tel)
       .eq("email", email)
@@ -43,8 +44,9 @@ const FindId = () => {
     if (error || !data) {
       alert("존재하지 않는 정보입니다");
     } else {
-      setFoundId(data.id);
       setFoundName(data.name);
+      setFoundId(data.id);
+      setFoundTel(data.tel);
       setNewPage(true);
     }
   };
@@ -54,6 +56,7 @@ const FindId = () => {
       <ShowId
         foundId={foundId}
         foundName={foundName}
+        foundTel={foundTel}
         goBack={() => setNewPage(false)}
       />
     );

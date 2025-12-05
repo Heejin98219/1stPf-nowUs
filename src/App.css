@@ -829,24 +829,35 @@ textarea {
 }
 
 /* ShowId.jsx */
-.userId-div {
-  line-height: 85px;
+/* 회색 div 감싸는 div */
+.found-div {
+  border: 2px solid red;
   text-align: center;
-  margin-top: 5rem;
 }
 
-/* '회원님의 아이디는' */
-.userIdIs {
+/* 회색 div */
+.foundTitle-div {
+  border: 3px solid #ccc;
   text-align: center;
-  font-size: 2rem;
+  margin: 5rem 0 5rem 0;
+  display: inline-block;
+  padding: 4.5rem 130px 4.5rem 130px;
+  line-height: 80px;
 }
 
-/* 사용자 아이디
-(FindId.jsx에서 받아온 ShowId)*/
-.userId {
-  font-size: 4rem;
+/* '아이디 ~ 완료되었습니다' */
+.id-completed {
+  font-size: 33px;
 }
 
-.userId-p {
-  font-size: 2rem;
+/* '가입된 ~ 있습니다' */
+.idNum {
+  font-size: 25.5px;
+}
+
+/* 사용자가 가입한 아이디 개수
+{foundId ? 1 : 0}
+ */
+.joinedId {
+  font-weight: bold;
 }
