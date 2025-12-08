@@ -829,9 +829,9 @@ textarea {
 }
 
 /* ShowId.jsx */
+
 /* 회색 div 감싸는 div */
 .found-div {
-  border: 2px solid red;
   text-align: center;
 }
 
@@ -846,7 +846,7 @@ textarea {
 }
 
 /* '아이디 ~ 완료되었습니다' */
-.id-completed {
+.idCompleted {
   font-size: 33px;
 }
 
@@ -860,4 +860,23 @@ textarea {
  */
 .joinedId {
   font-weight: bold;
+}
+
+.userName,
+.userTel,
+.userId {
+  font-size: 1.5rem;
+  padding-left: 3rem;
+}
+
+.userTel > span {
+  padding-left: 15px;
+}
+
+.grayBorder {
+  background-color: #f3f3f3;
+  border: 1px solid #dcdcdc;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
 }
