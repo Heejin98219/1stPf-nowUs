@@ -30,16 +30,25 @@ const ShowId = ({ foundId, foundName, foundTel, goBack }) => {
           </p>
         </div>
 
-        <div className="grayBorder">
-          <ul className="userInfo-ul">
-            <li className="userName">이&nbsp;&nbsp;름{foundName}</li>
+        <div className="midBorder">
+          <ul className="userInfoes-ul">
+            <li className="userName">
+              <ul className="userInfo-ul">
+                <li>이&nbsp;름</li>
+                <li>{foundName}</li>
+              </ul>
+            </li>
             <li className="userTel">
-              전&nbsp;화&nbsp;번&nbsp;호&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <span>{AddHyphen(foundTel)}</span>
+              <ul className="userInfo-ul">
+                <li>전화번호</li>
+                <li>{AddHyphen(foundTel)}</li>
+              </ul>
             </li>
             <li className="userId">
-              아&nbsp;&nbsp;이&nbsp;&nbsp;디
-              {makeUserIdSecret(foundId)}
+              <ul className="userInfo-ul">
+                <li>아이디</li>
+                <li>{foundId}</li>
+              </ul>
             </li>
           </ul>
         </div>

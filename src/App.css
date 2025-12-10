@@ -829,7 +829,6 @@ textarea {
 }
 
 /* ShowId.jsx */
-
 /* 회색 div 감싸는 div */
 .found-div {
   text-align: center;
@@ -839,13 +838,13 @@ textarea {
 .foundTitle-div {
   border: 3px solid #ccc;
   text-align: center;
-  margin: 5rem 0 5rem 0;
+  margin: 5rem 0;
   display: inline-block;
-  padding: 4.5rem 130px 4.5rem 130px;
+  padding: 4.5rem 130px;
   line-height: 80px;
 }
 
-/* '아이디 ~ 완료되었습니다' */
+/* '아이디 찾기 완료되었습니다' */
 .idCompleted {
   font-size: 33px;
 }
@@ -855,13 +854,21 @@ textarea {
   font-size: 25.5px;
 }
 
-/* 사용자가 가입한 아이디 개수
-{foundId ? 1 : 0}
- */
 .joinedId {
   font-weight: bold;
 }
 
+/* 메인 박스 */
+.midBorder {
+  background-color: #f3f3f3;
+  border: 1px solid #f3f3f3;
+  padding: 2.5rem;
+  border-radius: 10px;
+  margin: 0 auto;
+  width: 60%;
+}
+
+/* '이름', '전화번호' '아이디' */
 .userName,
 .userTel,
 .userId {
@@ -869,14 +876,31 @@ textarea {
   padding-left: 3rem;
 }
 
-.userTel > span {
-  padding-left: 15px;
+/* 텍스트, 데이터 감싸는 ul */
+.userInfo-ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2.5rem;
+  padding: 1rem 0;
+  line-height: 60px;
 }
 
-.grayBorder {
-  background-color: #f3f3f3;
-  border: 1px solid #dcdcdc;
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 20px;
+/* '이름' + 사용자 이름 */
+.userInfo-ul > li:first-child {
+  width: 120px;
+  text-align: left;
+  font-weight: bold;
+}
+
+/* '아이디' + 사용자 아이디 */
+.userInfo-ul > li:last-child {
+  flex: 1;
+  text-align: left;
+  overflow-wrap: break-word;
+}
+
+/* 사용자 정보 출력하는 div */
+.userInfoes-ul > li:not(:last-child) {
+  margin-bottom: 1.5rem;
 }
