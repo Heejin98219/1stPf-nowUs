@@ -8,7 +8,7 @@ const TopMenu = () => {
         <ul className="TopMenu">
           <li>
             <img
-              src="../public/image/nowWeLogo.jpg"
+              src="../public/image/LogoImg.jpg"
               alt="로고 이미지"
               style={{
                 width: "90px",

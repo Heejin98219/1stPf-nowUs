@@ -1,135 +1,3 @@
-/* reset css */
-
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol,
-ul {
-  list-style: none;
-}
-blockquote,
-q {
-  quotes: none;
-}
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
 /* 눈누 호출 */
 @font-face {
   font-family: "PyeongchangPeace";
@@ -240,7 +108,7 @@ label {
 
 /* Congrats.jsx */
 .open {
-  background-image: url("/image/congrats.jpg");
+  background-image: url("../public/image/OpenImg.jpg");
   background-size: contain;
   color: black;
   font-size: 2.5rem;
@@ -316,9 +184,8 @@ label {
 /* 전체 캐러셀 */
 .slider-container {
   position: relative;
-  height: 255px;
+  height: 600px;
   overflow: hidden;
-  border: 2px solid black;
 }
 
 /* 전체 캐러셀 */
@@ -334,8 +201,67 @@ label {
   cursor: pointer;
 }
 
-/* DogsDay.jsx */
-/* 눈누 호출 */
+/* 첫번째 캐러셀 */
+.carousel1st {
+  font-weight: bold;
+  color: black;
+  font-family: "ChusaSarang";
+  margin-top: 25px;
+  font-size: "80px";
+}
+
+/* 두번째 캐러셀 */
+.carousel2nd {
+  font-weight: bolder;
+  color: white;
+  font-family: "FounderYooGeonWook";
+  margin-top: 30px;
+  font-size: 70px;
+}
+
+/* 세번째 캐러셀 */
+.carousel3rd {
+  font-weight: "bold";
+  color: white;
+  font-family: "FounderYooGeonWook";
+  margin-top: 30px;
+  font-size: 75px;
+}
+
+/* 네번째 캐러셀 */
+.carousel4th {
+  font-weight: bolder;
+  color: black;
+  font-family: "FounderYooGeonWook";
+  margin-top: "32.5px";
+  font-size: "75px";
+}
+
+/* 다섯번째 캐러셀 */
+.carousel5th {
+  font-weight: bold;
+  color: white;
+  font-family: "GanaChocolate";
+  margin-top: 10px;
+  font-size: 75px;
+}
+
+/* 여섯번째 캐러셀*/
+.carousel6th {
+  font-weight: bolder;
+  color: black;
+  font-family: "YeogiOttaeJalnan";
+  margin-top: 10px;
+  font-size: 50px;
+}
+
+/* 이미지 캐러셀 */
+.carousel-img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 /* (강아지의 날)전체 div */
 .dogsDay {
@@ -474,116 +400,6 @@ label {
   border-radius: 10px;
   margin-bottom: 10px;
 }
-
-/* Reservation.jsx 보류 */
-/* 이름 */
-.Name {
-  font-size: 1rem;
-  font-weight: bold;
-  margin: 10px 0 5px;
-  color: #333;
-}
-
-/* 상세 글 */
-.Detail {
-  font-size: 1.1rem;
-  color: #666;
-  line-height: 1.4;
-  word-break: keep-all;
-}
-
-.reviewTitle {
-  text-align: center;
-  font-size: 1.8rem;
-  margin-top: 40px;
-  color: #222;
-}
-
-form {
-  margin-top: 110px;
-  font-size: 20px;
-  text-align: center;
-}
-
-/* '방문 예약 및 상담 신청'*/
-.reservationTitle {
-  font-weight: bold;
-  font-size: 45px;
-  text-align: center;
-  margin-top: 30px;
-}
-
-.content {
-  border: 3px solid#ff6666;
-  font-size: 19px;
-  line-height: 70px;
-  display: inline-block;
-  width: 610px;
-}
-
-textarea {
-  resize: none;
-  overflow-y: auto;
-}
-
-/* 완료 버튼 */
-.submit {
-  background-color: #ff6666;
-  color: white;
-  text-align: center;
-  border: 2px solid #ff6666;
-  width: 250px;
-  height: 50px;
-  font-size: 23px;
-  border-radius: 15px;
-  margin: 40px 0 30px 0;
-}
-
-.submit:hover {
-  cursor: pointer;
-  background-color: #ff9999;
-  border: 2px solid #ff9999;
-}
-
-/* 인풋*/
-.nameTbx,
-.phoneNumTbx {
-  width: 250px;
-  height: 30px;
-  padding-left: 5px;
-}
-
-.nameTbx::placeholder,
-.phoneNumTbx::placeholder {
-  font-size: 16px;
-}
-
-/* 셀렉트 박스 */
-#branch-select,
-#species-select {
-  width: 180px;
-  height: 34px;
-  font-size: 15px;
-}
-
-/* 타임 인풋 */
-.input-time {
-  width: 150px;
-  height: 30px;
-}
-
-/* 문의사항 Tbx (textarea)*/
-.largeTbx {
-  width: 300px;
-  height: 100px;
-
-  padding: 10px;
-  border-radius: 6px;
-  border: 2px solid #ccc;
-  font-size: 15px;
-  margin: 0 auto;
-}
-
 /* Information.jsx */
 /* 밑줄 */
 .underline {
@@ -627,9 +443,6 @@ textarea {
 
 /* 회사 정보 ul */
 .companyInfo-ul {
-  /* display: flex;
-  justify-content: space-evenly;
-  width: 55%; */
   margin-left: 45px;
   line-height: 25px;
 }
@@ -645,9 +458,8 @@ textarea {
 /* sns 로고 div */
 .sns-Div {
   display: flex;
-  justify-content: space-between;
-  float: right;
-  margin: 0 0 25px 0;
+  justify-content: flex-end;
+  margin: 3rem 0 13px 0;
 }
 
 /* sns 로고 ul */
@@ -673,6 +485,15 @@ textarea {
 .snsIcon:hover {
   cursor: pointer;
   color: #aaa;
+}
+
+/* Copyright.jsx */
+.footer {
+  text-align: center;
+  line-height: 20px;
+  font-size: 13px;
+  padding: 9px 0 5px 0;
+  border-top: 2px solid #aaa;
 }
 
 /* Login.jsx */
@@ -794,15 +615,6 @@ textarea {
 .extraMenu > li:hover {
   font-weight: bold;
 }
-
-/* Copyright.jsx */
-.copyright {
-  margin-top: 5rem;
-  text-align: center;
-  line-height: 13px;
-  font-size: 11px;
-}
-
 /* ScrollTopBtn */
 /* 상단 이동 버튼 */
 .arrow-up {

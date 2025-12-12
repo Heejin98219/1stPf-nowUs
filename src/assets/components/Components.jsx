@@ -1,9 +1,8 @@
-import Congrats from "./Congrats";
+import Open from "./Open";
 import TopMenu from "./TopMenu";
 import Carousel from "./Carousel";
 import DogsDay from "./DogsDay";
 import Review from "./Review";
-import Reservation from "./Reservation";
 import Information from "./Infomation";
 import Sns from "./Sns";
 import MakeHappy from "./MakeHappy";
@@ -14,14 +13,12 @@ const Components = () => {
   return (
     <>
       {/* 모든 컴포넌트 입니다 */}
-      <Congrats />
+      <Open />
       <TopMenu />
       <Carousel />
       <DogsDay />
       <ScrollTopBtn />
       <Review />
-
-      <Reservation />
       <MakeHappy />
       <Information />
       <Sns />

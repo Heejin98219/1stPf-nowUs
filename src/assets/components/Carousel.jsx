@@ -6,38 +6,17 @@ const slides = [
       <>
         {/* 상단 메뉴입니다 */}
         💰
-        <span
-          className="money"
-          style={{
-            fontWeight: "bold",
-            color: "#000",
-            fontFamily: "ChusaSarang",
-            marginTop: "25px",
-            fontSize: "80px",
-          }}
-        >
-          지역 화폐
-        </span>
+        <span className="carousel1st">지역 화폐</span>
         &nbsp;사용 가능
       </>
     ),
-    bg: "#FFD700",
+    bg: "#ffd700",
   },
   {
     content: (
       <>
         💊
-        <span
-          style={{
-            fontWeight: "bolder",
-            color: "#fff",
-            fontFamily: "FounderYooGeonWook",
-            marginTop: "30px",
-            fontSize: "70px",
-          }}
-        >
-          병원비 20% ~ 40%
-        </span>
+        <span className="carousel2nd">병원비 20% ~ 40%</span>
         &nbsp;지원
       </>
     ),
@@ -47,17 +26,7 @@ const slides = [
     content: (
       <>
         ✂️🛁 병원 및 미용 비용&nbsp;
-        <span
-          style={{
-            fontWeight: "bold",
-            color: "#fff",
-            fontFamily: "FounderYooGeonWook",
-            marginTop: "30px",
-            fontSize: "75px",
-          }}
-        >
-          적립금
-        </span>
+        <span className="carousel3rd">적립금</span>
         &nbsp; 사용 가능
       </>
     ),
@@ -67,17 +36,7 @@ const slides = [
     content: (
       <>
         🏨🎓 유치원 및 호텔
-        <span
-          style={{
-            fontWeight: "bolder",
-            color: "#000",
-            fontFamily: "FounderYooGeonWook",
-            marginTop: "32.5px",
-            fontSize: "75px",
-          }}
-        >
-          &nbsp;할인
-        </span>
+        <span className="carousel4th">&nbsp;할인</span>
       </>
     ),
     bg: "#00CED1",
@@ -86,17 +45,7 @@ const slides = [
     content: (
       <>
         🐾👨‍🏫
-        <span
-          style={{
-            fontWeight: "bold",
-            color: "#fff",
-            fontFamily: "GanaChocolate",
-            marginTop: "10px",
-            fontSize: "75px",
-          }}
-        >
-          전문 훈련사
-        </span>
+        <span className="carousel5th">전문 훈련사</span>
         &nbsp;상주
       </>
     ),
@@ -106,21 +55,33 @@ const slides = [
     content: (
       <>
         🩺
-        <span
-          style={{
-            fontWeight: "bolder",
-            color: "#000",
-            fontFamily: "YeogiOttaeJalnan",
-            marginTop: "10px",
-            fontSize: "50px",
-          }}
-        >
-          기초검진
-        </span>
+        <span className="carousel6th">기초검진</span>
         &nbsp;무료
       </>
     ),
     bg: "#90EE90",
+  },
+  {
+    content: (
+      <>
+        <img
+          src="../public/image/CarouselImg01.jpg"
+          alt="캐러셀 이미지01"
+          className="carousel-img"
+        ></img>
+      </>
+    ),
+  },
+  {
+    content: (
+      <>
+        <img
+          src="../public/image/CarouselImg02.jpg"
+          alt="캐러셀 이미지02"
+          className="carousel-img"
+        ></img>
+      </>
+    ),
   },
 ];
 
@@ -146,8 +107,8 @@ export default function Carousel() {
       className="slider-container"
       style={{
         overflow: "hidden",
-        width: "100%",
-        height: "225px",
+        width: "67%",
+        margin: "0 auto",
       }}
     >
       <div

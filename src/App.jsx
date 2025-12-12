@@ -1,3 +1,4 @@
+import "./reset.css";
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Components from "./assets/components/Components";
