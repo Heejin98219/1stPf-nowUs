@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const ShowId = ({ foundId, foundName, foundTel, goBack }) => {
   const makeUserIdSecret = (id) => {
     if (!id) return "";
@@ -15,7 +17,6 @@ const ShowId = ({ foundId, foundName, foundTel, goBack }) => {
       return onlyNum.replace(/(\d{3})(\d{4})(\d{4})/, "$1-$2-$3");
     }
 
-    // 그 외 : 그대로 반환
     return tel;
   };
 
@@ -50,6 +51,16 @@ const ShowId = ({ foundId, foundName, foundTel, goBack }) => {
                 <li>{foundId}</li>
               </ul>
             </li>
+          </ul>
+        </div>
+        <div className="bottomMenues">
+          <ul className="otherMenues">
+            <li>
+              <Link to="/login">회원가입</Link>
+            </li>
+            <li>로그인</li>
+
+            <li>비밀번호 찾기</li>
           </ul>
         </div>
       </div>
