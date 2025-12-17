@@ -18,7 +18,7 @@ const DogsDay = () => {
           <br />
           <div className="promiseMent">
             <span className="promise">
-              보호소 '지금, 우리'는
+              '지금, 우리'는
               <br />
               모든 동물들이 행복할 수 있는 그 날까지
               <br />

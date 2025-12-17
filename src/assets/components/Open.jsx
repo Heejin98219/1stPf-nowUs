@@ -6,7 +6,9 @@ const Congrats = () => {
   return (
     <>
       <div className="open">
-        <div className="openTxt">지금, 우리의 동탄 오픈을 축하합니다!</div>
+        <div className="openTxt">
+          <span>지금,우리의 동탄 오픈을 축하합니다!</span>
+        </div>
       </div>
     </>
   );

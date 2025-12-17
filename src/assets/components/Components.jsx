@@ -8,12 +8,13 @@ import Sns from "./Sns";
 import MakeHappy from "./MakeHappy";
 import ScrollTopBtn from "./ScrollTopBtn";
 import Copyright from "./Copyright";
-
+import PageLogo from "./PageLogo";
 const Components = () => {
   return (
     <>
       {/* 모든 컴포넌트 입니다 */}
       <Open />
+      <PageLogo />
       <TopMenu />
       <Carousel />
       <DogsDay />

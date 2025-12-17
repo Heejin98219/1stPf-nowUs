@@ -110,18 +110,36 @@ label {
 .open {
   background-image: url("../public/image/OpenImg.jpg");
   background-size: contain;
-  color: black;
-  font-size: 2.5rem;
+  color: white;
+  font-size: 35px;
   text-align: center;
   height: 100px;
   font-weight: bold;
   font-family: "PyeongchangPeace";
-  padding-top: 2rem;
-  margin-bottom: 3.5rem;
+  padding: 30px 0 3px 0;
+  margin-bottom: 70px;
   cursor: pointer;
+  background-color: black;
+  font-weight: bold;
 }
 .open > .openTxt {
   padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+.open > .openTxt > span {
+  line-height: 50px;
+}
+
+.logoImage {
+  margin-bottom: 60px;
+}
+
+/* PageLogo.jsx */
+.pageLogo {
+  width: 130px;
+  height: 110px;
+  border: 2px solid red;
 }
 
 /* TopMenu.jsx */
@@ -532,8 +550,9 @@ label {
 .findId-telTbx,
 .findId-emailTbx,
 .findPw-nameTbx,
-.findPw-mailTbx,
-.findPw-idTbx {
+.findPw-idTbx,
+.findPw-hintTbx,
+.findPw-pwTbx {
   width: 390px;
   height: 40px;
   font-size: 17px;
@@ -551,7 +570,10 @@ label {
 .findId-emailTbx,
 .findId-telTbx,
 .findPw-mailTbx,
-.findPw-idTbx {
+.findPw-nameTbx,
+.findPw-idTbx,
+.findPw-hintTbx,
+.findPw-pwTbx {
   margin-top: 15px;
 }
 
