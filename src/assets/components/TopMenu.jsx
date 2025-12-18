@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 const TopMenu = () => {
   return (
     <>
@@ -12,6 +10,7 @@ const TopMenu = () => {
               <li>지점</li>
             </ul>
           </li>
+
           <li className="mainMenu">
             지원
             <ul className="subMenu">
@@ -19,6 +18,7 @@ const TopMenu = () => {
               <li>봉사</li>
             </ul>
           </li>
+
           <li className="mainMenu">
             기부
             <ul className="subMenu">
@@ -26,6 +26,7 @@ const TopMenu = () => {
               <li>현금</li>
             </ul>
           </li>
+
           <li className="mainMenu">
             강아지
             <ul className="subMenu">
@@ -34,6 +35,7 @@ const TopMenu = () => {
               <li>대형견</li>
             </ul>
           </li>
+
           <li className="mainMenu">
             고양이
             <ul className="subMenu">
@@ -42,24 +44,12 @@ const TopMenu = () => {
               <li>대형묘</li>
             </ul>
           </li>
+
           <li className="mainMenu">
-            자주하는 질문
+            문의하기
             <ul className="subMenu">
-              <li>문의하기</li>
-            </ul>
-          </li>
-          <li className="mainMenu">
-            <Link to="/login">로그인</Link>
-            <ul className="subMenu">
-              <li>
-                <Link to="/join">회원가입</Link>
-              </li>
-              <li>
-                <Link to="/findId">아이디 찾기</Link>
-              </li>
-              <li>
-                <Link to="/findPw">비밀번호 찾기</Link>
-              </li>
+              <li>자주하는 질문</li>
+              <li>1:1 질문하기</li>
             </ul>
           </li>
         </ul>
