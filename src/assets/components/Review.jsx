@@ -22,7 +22,7 @@ const reviews = [
     id: 3,
     img: "https://changwon.go.kr/animal/atcfile/25550712550102760.jpg",
     name: "jh1229",
-    text: "항상 제게 위안이 되고 있어요ㅎㅎ",
+    text: "항상 위안이 되고 있어요ㅎㅎ",
   },
   {
     id: 4,
@@ -58,7 +58,7 @@ const reviews = [
     id: 9,
     img: "https://cdn.dailyvet.co.kr/wp-content/uploads/2024/12/05205858/20241205ceva_experts2.jpg",
     name: "iloveanimals",
-    text: "입양, 정말 잘 한 거 같아요!",
+    text: "입양 정말 잘 한 거 같아요!",
   },
   {
     id: 10,
@@ -106,19 +106,19 @@ const reviews = [
     id: 17,
     img: "https://image.dongascience.com/Photo/2020/11/7ae755d21462741dc15d14a048d981f8.jpg",
     name: "rkddnjsxor11",
-    text: "하는 행동들이 어쩜 이렇게 다 사랑스러울까요",
+    text: "행동들이 어쩜 이렇게 다 사랑스러울까요",
   },
   {
     id: 18,
     img: "https://cdn.dailyvet.co.kr/wp-content/uploads/2024/05/15231647/20240515ceva_experts4.jpg",
     name: "rkddnjsxor56",
-    text: "눈 마주치면 심장이 쿵! 하고 내려앉는 거 같아요 (>ㅁ<)",
+    text: "눈 마주치면 내려앉는 거 같아요 (>ㅁ<)",
   },
   {
     id: 19,
     img: "https://cdn.korearailroad.kr/news/photo/202503/2285_3028_626.jpg",
     name: "sunny",
-    text: "애인 없어도 전 연분홍색 빛 안에 있어요 ㅎㅎㅎㅎㅎㅎ",
+    text: "남자친구 필요 없어요 ㅋㅋ",
   },
   {
     id: 20,

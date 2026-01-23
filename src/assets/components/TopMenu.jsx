@@ -11,8 +11,8 @@ const TopMenu = () => {
               src="../public/image/LogoImg.jpg"
               alt="로고 이미지"
               style={{
-                width: "90px",
-                height: "70px",
+                width: "80px",
+                height: "60px",
               }}
             />
           </li>
@@ -21,6 +21,7 @@ const TopMenu = () => {
           <li className="mainMenu">
             소개
             <ul className="subMenu">
+              <li>하는 일</li>
               <li>지점</li>
             </ul>
           </li>
@@ -61,7 +62,7 @@ const TopMenu = () => {
             </ul>
           </li>
           <li className="mainMenu">
-            <Link to="/login">로그인</Link>
+            <Link to="/login">Login</Link>
             <ul className="subMenu">
               <li>
                 <Link to="/join">회원가입</Link>

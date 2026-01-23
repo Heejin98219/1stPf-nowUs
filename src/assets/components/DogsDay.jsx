@@ -3,7 +3,7 @@ const DogsDay = () => {
     <>
       {/* 강아지의 날 입니다 */}
       <div className="dogsDay">
-        <img src="./public/image/Dog.jpg" className="dogImg" alt="이미지"></img>
+        <img src="/image/Dogs.png" className="dogImg" alt="이미지"></img>
         <div className="ment">
           <div className="tellDogsDay">
             <span className="date">3월 23일</span>

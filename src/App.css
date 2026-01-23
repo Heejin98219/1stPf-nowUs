@@ -137,7 +137,7 @@ label {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  width: 75%;
+  width: 72%;
   height: 150px;
   list-style: none;
   padding: 0;
@@ -176,6 +176,11 @@ label {
   font-size: 21px;
 }
 
+.subMenu > li:hover {
+  color: #ff6666;
+  text-decoration: underline;
+}
+
 .mainMenu:hover > .subMenu {
   display: block;
 }
@@ -188,71 +193,12 @@ label {
   overflow: hidden;
 }
 
-/* 전체 캐러셀 */
-.slider-track {
-  display: flex;
-  height: 100%;
-}
-
-/* 캐러셀의 각 슬라이드 */
-.slide {
-  flex: 0 0 100%;
-  display: flex;
-  cursor: pointer;
-}
-
-/* 첫번째 캐러셀 */
-.carousel1st {
-  font-weight: bold;
-  color: black;
-  font-family: "ChusaSarang";
-  margin-top: 25px;
-  font-size: "80px";
-}
-
-/* 두번째 캐러셀 */
-.carousel2nd {
-  font-weight: bolder;
-  color: white;
-  font-family: "FounderYooGeonWook";
-  margin-top: 30px;
-  font-size: 70px;
-}
-
-/* 세번째 캐러셀 */
-.carousel3rd {
-  font-weight: "bold";
-  color: white;
-  font-family: "FounderYooGeonWook";
-  margin-top: 30px;
-  font-size: 75px;
-}
-
-/* 네번째 캐러셀 */
-.carousel4th {
-  font-weight: bolder;
-  color: black;
-  font-family: "FounderYooGeonWook";
-  margin-top: "32.5px";
-  font-size: "75px";
-}
-
-/* 다섯번째 캐러셀 */
-.carousel5th {
-  font-weight: bold;
-  color: white;
-  font-family: "GanaChocolate";
-  margin-top: 10px;
-  font-size: 75px;
-}
-
-/* 여섯번째 캐러셀*/
-.carousel6th {
-  font-weight: bolder;
-  color: black;
-  font-family: "YeogiOttaeJalnan";
-  margin-top: 10px;
-  font-size: 50px;
+/* 캐러셀 */
+.carousel-div {
+  overflow: hidden;
+  width: 67%;
+  margin: 0 auto;
+  padding-top: 50px;
 }
 
 /* 이미지 캐러셀 */
@@ -261,6 +207,9 @@ label {
   height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
+}
+.carousel-img:hover {
+  cursor: pointer;
 }
 
 /* (강아지의 날)전체 div */
@@ -284,28 +233,29 @@ label {
 
 /* 강아지 사진 */
 .dogImg {
-  width: 570px;
-  height: 660px;
+  width: 650px;
+  height: 850px;
   background-size: cover;
-  margin: 10rem 0 5rem 0rem;
+  margin-top: 10rem;
 }
 
 /* '강아지의 날' */
 .tellDogsDay {
   font-family: "SchoolSafetyAquariumDecor";
   font-size: 4.5rem;
-  line-height: 85px;
+  line-height: 80px;
 }
 
 /* '3월 23일 */
 .date {
   font-family: "MapoHongdaeFreedom";
-  font-size: 2.5rem;
+  font-size: 2.7rem;
 }
 
-/* '지금까지는 ~ 함께하겠습니다. */
+/* '보호소 ~ 함께하겠습니다. */
 .promiseMent {
-  line-height: 60px;
+  line-height: 58px;
+  margin-bottom: 50px;
 }
 
 /* '함께해요', '동물', '입양' ul*/
@@ -334,7 +284,7 @@ label {
 /* Review.jsx */
 /* '따뜻한 ~ 이야기' */
 .storyTitle {
-  margin: 7.5rem 0px 50px 0px;
+  margin: 10rem 0px 50px 0px;
   text-align: center;
   font-size: 2.5rem;
   font-family: "HsJandari";
@@ -373,8 +323,8 @@ label {
 
 /* 이미지 아이디, 후기를 포함한 div */
 .reviewDiv {
-  width: 300px;
-  height: 350px;
+  width: 280px;
+  height: 300px;
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
@@ -400,6 +350,14 @@ label {
   border-radius: 10px;
   margin-bottom: 10px;
 }
+
+.Name {
+  margin-bottom: 10px;
+}
+.Detail {
+  margin-top: 10px;
+}
+
 /* Information.jsx */
 /* 밑줄 */
 .underline {
@@ -462,23 +420,26 @@ label {
   margin: 3rem 0 13px 0;
 }
 
-/* sns 로고 ul */
 .snsIcons {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin-right: 10px;
+}
+
+/* sns 로고 ul */
+.snsIcons li {
+  margin-right: 10px;
+}
+
+.snsIcons li:last-child {
+  margin-right: 10px;
 }
 
 /* 각 sns로고 */
 .snsIcon {
   color: #ccc;
   display: inline-block;
-}
-
-/* 마지막 sns 로고  */
-/* (스레드) */
-.snsIcon:last-child {
-  margin: 0 20px 3px 0;
 }
 
 /* sns 로고 ul hover */
@@ -585,7 +546,7 @@ label {
   font-family: "OngleIpSeaBreeze";
   text-align: center;
   font-size: 3rem;
-  margin-top: 6.5rem;
+  margin: 5rem 0 6rem 0rem;
   line-height: 80px;
 }
 
