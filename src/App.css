@@ -95,18 +95,17 @@
   font-display: swap;
 }
 
-/* a태그 */
 a {
   color: black;
   text-decoration: none;
 }
 
-/* 레이블 */
 label {
   margin: 0 15px 0px 25px;
 }
 
-/* Congrats.jsx */
+/* Open.jsx */
+/* 텍스트 div 감싸는 div*/
 .open {
   background-image: url("../public/image/OpenImg.jpg");
   background-size: contain;
@@ -120,20 +119,22 @@ label {
   margin-bottom: 3.5rem;
   cursor: pointer;
 }
+
+/* 텍스트의 div */
 .open > .openTxt {
   padding: 10px;
 }
 
 /* TopMenu.jsx */
-/* 전체 메뉴 감싸는 div */
+/* 상단 메뉴 전체 div */
 .TopMenu-div {
   display: flex;
   justify-content: space-evenly;
   font-size: center;
 }
 
-/* 전체 메뉴 */
-.TopMenu {
+/* 상단 메뉴 전체 ul */
+.TopMenu-ul {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -141,31 +142,16 @@ label {
   height: 150px;
   list-style: none;
   padding: 0;
-}
-
-/* 로고 이미지 */
-.TopMenu > li:first-child img {
-  display: block;
-  height: 2px;
-  width: auto;
-}
-
-/* 메인 메뉴 */
-.TopMenu > li {
-  font-weight: bold;
-  font-size: 28px;
-  font-family: "Taenada";
   cursor: pointer;
-  margin-bottom: 100px;
+  font-family: "Taenada";
 }
 
-/* hover 효과 */
-.TopMenu a:hover {
-  color: #ff6666;
-  text-decoration: underline;
+/* 각 메인 메뉴*/
+.mainMenu {
+  font-size: 28px;
 }
 
-/* 서브메뉴 */
+/* 서브메뉴 숨김 */
 .subMenu {
   display: none;
   position: absolute;
@@ -174,31 +160,42 @@ label {
   margin-top: 3px;
   line-height: 30px;
   font-size: 21px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
+/* hover 효과 */
+/* Login' */
+.subMenu li:hover a {
+  color: #ff6666;
+  text-decoration: underline;
+}
+
+/* hover 효과 */
+.mainMenu:hover > .subMenu {
+  display: block;
+}
+
+/* hover 효과 */
 .subMenu > li:hover {
   color: #ff6666;
   text-decoration: underline;
 }
 
-.mainMenu:hover > .subMenu {
-  display: block;
-}
-
 /* Carousel.jsx  */
-/* 전체 캐러셀 */
-.slider-container {
-  position: relative;
-  height: 600px;
-  overflow: hidden;
-}
-
-/* 캐러셀 */
+/* 캐러셀 div를 감싸는 div */
 .carousel-div {
   overflow: hidden;
   width: 67%;
   margin: 0 auto;
   padding-top: 50px;
+}
+
+/* 캐러셀 */
+.carousel-div > div {
+  display: flex;
+  transition: transform 1s ease;
 }
 
 /* 이미지 캐러셀 */
@@ -208,30 +205,33 @@ label {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+/* hover 효과 */
 .carousel-img:hover {
   cursor: pointer;
 }
 
-/* (강아지의 날)전체 div */
+/* DogsDay.jsx */
+/* 전체 div */
 .dogsDay {
   margin: 0 auto;
   text-align: center;
 }
 
-/* 텍스트 전체 div */
+/* 이미지 외 div */
 .ment {
   margin-top: 25px;
   text-align: center;
 }
 
-/* '전체 텍스트 div '*/
+/* '보호소 ~ 함께하겠습니다' span */
 .promise {
   font-family: "PerpetualSnow";
   font-size: 20px;
   font-weight: bold;
 }
 
-/* 강아지 사진 */
+/* 이미지 (강아지) */
 .dogImg {
   width: 650px;
   height: 850px;
@@ -239,26 +239,27 @@ label {
   margin-top: 10rem;
 }
 
-/* '강아지의 날' */
+/* '강아지의 날 소개' */
+/* (3월 23일 ~ 입니다) */
 .tellDogsDay {
   font-family: "SchoolSafetyAquariumDecor";
   font-size: 4.5rem;
   line-height: 80px;
 }
 
-/* '3월 23일 */
+/* '3월 23일' */
 .date {
   font-family: "MapoHongdaeFreedom";
   font-size: 2.7rem;
 }
 
-/* '보호소 ~ 함께하겠습니다. */
+/* '보호소 ~ 함께하겠습니다.' div */
 .promiseMent {
   line-height: 58px;
   margin-bottom: 50px;
 }
 
-/* '함께해요', '동물', '입양' ul*/
+/* '함께해요', '동물', '입양' 감싸는 ul*/
 .together {
   display: flex;
   width: 30%;
@@ -274,7 +275,7 @@ label {
   font-size: 21px;
 }
 
-/* '함께해요', '동물', '입양' 각 li hover */
+/* hover 효과 */
 .together > li:hover {
   cursor: pointer;
   color: #ff6666;
@@ -290,7 +291,7 @@ label {
   font-family: "HsJandari";
 }
 
-/* 전체 그리드 */
+/* 그리드 감싸는 div */
 .Grid {
   display: grid;
   grid-template-columns: repeat(4, 320px);
@@ -299,7 +300,7 @@ label {
   row-gap: 55px;
 }
 
-/* 이미지 아이디, 후기를 포함한 div */
+/* 그리드 */
 .reviewDiv {
   width: 320px;
   height: 400px;
@@ -311,17 +312,19 @@ label {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-/* 그리드 내 각 div hover */
+/* hover 효과 */
 .reviewDiv:hover {
   transform: translateY(-5px);
   box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
   cursor: pointer;
 }
 
-/* 이미지 아이디, 후기를 포함한 div */
+/* 이미지, 아이디, 후기를 포함한 div */
 .reviewDiv {
   width: 280px;
   height: 300px;
@@ -333,10 +336,12 @@ label {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-/* 이미지 아이디, 후기를 포함한 div */
+/* hover 효과 */
 .reviewDiv:hover {
   transform: translateY(-5px);
   box-shadow: 0px 6px 16px rgba(0, 0, 0, 0.15);
@@ -351,9 +356,12 @@ label {
   margin-bottom: 10px;
 }
 
+/* (그리드에 출력된\되는) 아이디 */
 .Name {
   margin-bottom: 10px;
 }
+
+/* (그리드에 출력되는) 후기 */
 .Detail {
   margin-top: 10px;
 }
@@ -365,7 +373,7 @@ label {
 }
 
 /* '개인정보취급방침', 
-'이메일무단수집거부' li */
+'이메일무단수집거부' (li) */
 .notice-div {
   display: flex;
   justify-content: space-between;
@@ -373,7 +381,7 @@ label {
 }
 
 /* '개인정보취급방침', 
-'이메일무단수집거부' ul */
+'이메일무단수집거부' (ul) */
 .notice-ul {
   display: flex;
   justify-content: space-between;
@@ -387,25 +395,34 @@ label {
   padding-left: 11px;
 }
 
-/* '개인정보취급방침', 
-'이메일무단수집거부' li hover */
+/* hover 효과 */
 .notice-ul > li:hover {
   cursor: pointer;
   text-decoration: underline;
+  color: #202020;
 }
 
-/* 회사 정보 div*/
+/* 회사 정보 div */
+/* (보호소 이름 등) */
 .companyInfo-div {
   margin: 18px 0 0 -26px;
 }
 
 /* 회사 정보 ul */
+/* (보호소 이름 등) */
 .companyInfo-ul {
   margin-left: 45px;
   line-height: 25px;
 }
 
 /* 각 회사 정보 */
+/* 
+보호소 이름,
+운영 시간,
+전화번호,
+이메일,
+사업자등록번호
+*/
 .companyInfo-ul > li {
   display: inline-block;
   text-align: center;
@@ -420,6 +437,13 @@ label {
   margin: 3rem 0 13px 0;
 }
 
+/* sns 로고 */
+/* X(전 트위터),
+인스타그램,
+유튜브,
+페이스북,
+스레드
+*/
 .snsIcons {
   display: flex;
   list-style: none;
@@ -432,23 +456,25 @@ label {
   margin-right: 10px;
 }
 
+/* 마지막 sns 로고 (스레드) */
 .snsIcons li:last-child {
   margin-right: 10px;
 }
 
-/* 각 sns로고 */
+/* 각 sns 아이콘(들) */
 .snsIcon {
   color: #ccc;
   display: inline-block;
 }
 
-/* sns 로고 ul hover */
+/* hover 효과 */
 .snsIcon:hover {
   cursor: pointer;
   color: #aaa;
 }
 
 /* Copyright.jsx */
+/* 전체 div */
 .footer {
   text-align: center;
   line-height: 20px;
@@ -459,23 +485,42 @@ label {
 
 /* Login.jsx */
 /* 
-'로그인'
-'회원가입',
-'아이디 찾기',
-'비밀번호 찾기'
+'로그인 관련 메뉴 텍스트 */
+/*
+로그인,
+아이디 찾기,
+비밀번호 찾기,
+회원가입
 */
 .title {
   font-size: 65px;
   font-family: "Escoredream";
-  margin: 10rem 0 5rem 0;
+  margin: 3.5rem 0 5rem 0;
   text-align: center;
 }
 
 /* 
-각 페이지 인풋들
-(텍스트 박스, 버튼 등)*/
+로그인 관련 인풋들
+*/
 .inputs {
   text-align: center;
+}
+
+/*
+비밀번호 찾기 하단의
+'아이디 찾기' 
+*/
+.goFindId-div {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+
+/* hover 효과 */
+.goFindId-div > :hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #202020;
 }
 
 /* 텍스트 박스 */
@@ -498,7 +543,7 @@ label {
   width: 390px;
   height: 40px;
   font-size: 17px;
-  padding: 5px 6px 5px 6px;
+  padding: 5px 6px 5px 10px;
 }
 
 /* 최하단 텍스트 박스 */
@@ -531,7 +576,7 @@ label {
   font-weight: bold;
 }
 
-/* 버튼 hover */
+/* hover 효과 */
 .loginBtn:hover,
 .findIdBtn:hover,
 .findPwBtn:hover,
@@ -539,9 +584,11 @@ label {
   cursor: pointer;
   background-color: #ff9999;
   border: 2px solid #ff9999;
+  box-shadow: 0 4px 10px rgba(255, 102, 102, 0.3);
 }
 
 /* MakeHappy.jsx */
+/* '받기만 ~ 시간입니다' */
 .ourTurn {
   font-family: "OngleIpSeaBreeze";
   text-align: center;
@@ -567,12 +614,7 @@ label {
   }
 }
 
-/* 
-로그인 화면의
-'회원가입',
-'아이디 찾기',
-'비밀번호 찾기' hover
-*/
+/* hover 효과 */
 .extraMenu > li:hover {
   font-weight: bold;
 }
@@ -592,10 +634,12 @@ label {
   z-index: 1000;
 
   /* hover 전환 효과 */
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-/* 상단 이동 버튼 hover */
+/* hover 효과 */
 .arrow-up:hover {
   transform: scale(1.1);
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
@@ -627,21 +671,11 @@ label {
   font-size: 25.5px;
 }
 
-.joinedId {
-  font-weight: bold;
-}
-
-/* 사용자 정보 박스 */
-.midBorder {
-  background-color: #f3f3f3;
-  border: 1px solid #f3f3f3;
-  padding: 1.5rem;
-  border-radius: 10px;
-  margin: 0 auto;
-  width: 55%;
-}
-
-/* '이름', '전화번호' '아이디' */
+/* 사용자 정보 */
+/* 
+이름,
+전화번호, 
+아이디*/
 .userName,
 .userTel,
 .userId {
@@ -649,7 +683,7 @@ label {
   padding-left: 3rem;
 }
 
-/* 텍스트, 데이터 감싸는 ul */
+/* 사용자 정보 감싸는 ul */
 .userInfo-ul {
   display: flex;
   align-items: center;
@@ -659,37 +693,51 @@ label {
   line-height: 60px;
 }
 
-/* '이름' + 사용자 이름 */
+/* 첫번째 사용자 정보 li */
+/*
+'이름', 사용자 이름
+*/
 .userInfo-ul > li:first-child {
   width: 120px;
   text-align: left;
   font-weight: bold;
 }
 
-/* '아이디' + 사용자 아이디 */
+/* 마지막 사용자 정보 li */
+/*
+'아이디', 사용자 아이디
+*/
 .userInfo-ul > li:last-child {
   flex: 1;
   text-align: left;
   overflow-wrap: break-word;
 }
 
-/* 사용자 정보 출력하는 div */
+/* '아이디'와 사용자 아이디 제외한 li */
 .userInfoes-ul > li:not(:last-child) {
   margin-bottom: 1.5rem;
 }
 
-/* '로그인, 회원가입, 비밀번호 찾기' */
+/* 아이디 찾기 결과 하단 메뉴 감싸는 div */
+/* '로그인, 회원가입', '비밀번호 찾기' */
 .bottomMenues {
   margin-top: 5rem;
 }
 
+/* 아이디 찾기 결과 하단 메뉴 감싸는 ul */
+/* '로그인, 회원가입', '비밀번호 찾기' */
 .otherMenues {
-  display: flex;
-  justify-content: space-between;
-  width: 50%;
-  margin: 0 auto;
+  .otherMenues {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    margin: 0 auto;
+    padding: 0;
+  }
 }
 
+/* 아이디 찾기 결과 하단 베뉴 버튼 */
+/* '로그인, 회원가입', '비밀번호 찾기' */
 .otherMenues > li {
   font-weight: bold;
   font-size: 27px;
@@ -702,9 +750,38 @@ label {
   margin-bottom: 3rem;
 }
 
+/* hover 효과 */
 .otherMenues > li:hover {
   cursor: pointer;
   background-color: #ff9999;
   border: 2px solid #ff9999;
-  color: white;
+  color: black;
 }
+
+/* 아이디 찾기 결과 하단 베뉴 버튼 */
+/* '로그인, 회원가입', '비밀번호 찾기' */
+.menu-btn {
+  list-style: none;
+  font-size: 22px;
+  font-weight: bold;
+  border-radius: 12px;
+  padding: 14px 28px;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* a태그 */
+/* 아이디 찾기 결과 하단 베뉴 버튼 */
+/* '로그인, 회원가입', '비밀번호 찾기' */
+.menu-btn a {
+  color: #f1f3f5;
+  text-decoration: none;
+  display: block;
+}
+
+/* hover 효과 */
+.menu-btn:hover a {
+  color: #212529; /* 거의 검정 */
+}
+
+/* ----- 반응형 ----- */

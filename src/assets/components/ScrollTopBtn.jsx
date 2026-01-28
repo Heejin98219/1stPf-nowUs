@@ -8,7 +8,7 @@ const ScrollTop = () => {
 
   return (
     <>
-      {/* 상단으로 이동하는 버튼 */}
+      {/* 상단으로 이동하는 버튼입니다 */}
       <button className="arrow-up" onClick={ScrollUp}>
         <FontAwesomeIcon icon={faArrowUp} size="lg" />
       </button>

@@ -64,6 +64,7 @@ const FindId = () => {
 
   return (
     <>
+      {/* 아이디 찾기 입니다 */}
       <div>
         <h1 className="title">아이디 찾기</h1>
         <div className="inputs">

@@ -1,7 +1,7 @@
 const Copyright = () => {
   return (
     <>
-      {/* 저작권입니다 */}
+      {/* 저작권 입니다 */}
 
       <div className="footer">
         본 페이지는 개인 포트폴리오 용도로 제작되었습니다.

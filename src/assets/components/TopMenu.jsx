@@ -5,7 +5,7 @@ const TopMenu = () => {
     <>
       {/* 상단 메뉴입니다 */}
       <div className="TopMenu-div">
-        <ul className="TopMenu">
+        <ul className="TopMenu-ul">
           <li>
             <img
               src="../public/image/LogoImg.jpg"

@@ -36,8 +36,6 @@ export default function Carousel() {
     <div className="carousel-div">
       <div
         style={{
-          display: "flex",
-          transition: "transform 1s ease",
           transform: `translateX(-${index * 100}%)`,
         }}
       >

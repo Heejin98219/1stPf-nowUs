@@ -6,13 +6,12 @@ const ShowId = ({ foundId, foundName, foundTel, goBack }) => {
     return id.slice(0, id.length - 3) + "***";
   };
 
-  // 전화번호에 하이픈 추가하는 함수
+  // 전화번호에 하이픈 추가
   const AddHyphen = (tel) => {
     if (!tel) return "";
 
     const onlyNum = tel.replace(/[^0-9]/g, "");
 
-    // 010-XXXX-XXXX 형식
     if (onlyNum.length === 11) {
       return onlyNum.replace(/(\d{3})(\d{4})(\d{4})/, "$1-$2-$3");
     }
@@ -22,6 +21,7 @@ const ShowId = ({ foundId, foundName, foundTel, goBack }) => {
 
   return (
     <>
+      {/* 아이디 찾기 결과 */}
       <div className="found-div">
         <div className="foundTitle-div">
           <p className="idCompleted">아이디 찾기가 완료되었습니다.</p>
@@ -39,28 +39,36 @@ const ShowId = ({ foundId, foundName, foundTel, goBack }) => {
                 <li>{foundName}</li>
               </ul>
             </li>
+
             <li className="userTel">
               <ul className="userInfo-ul">
                 <li>전화번호</li>
                 <li>{AddHyphen(foundTel)}</li>
               </ul>
             </li>
+
             <li className="userId">
               <ul className="userInfo-ul">
                 <li>아이디</li>
-                <li>{foundId}</li>
+                <li>{makeUserIdSecret(foundId)}</li>
               </ul>
             </li>
           </ul>
         </div>
+
         <div className="bottomMenues">
           <ul className="otherMenues">
-            <li>
-              <Link to="/login">회원가입</Link>
+            <li className="menu-btn signup">
+              <Link to="/join">회원가입</Link>
             </li>
-            <li>로그인</li>
 
-            <li>비밀번호 찾기</li>
+            <li className="menu-btn login">
+              <Link to="/login">로그인</Link>
+            </li>
+
+            <li className="menu-btn findpw">
+              <Link to="/find-password">비밀번호 찾기</Link>
+            </li>
           </ul>
         </div>
       </div>
