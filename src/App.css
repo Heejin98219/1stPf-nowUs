@@ -785,3 +785,12 @@ label {
 }
 
 /* ----- 반응형 ----- */
+/* Oepn.jsx */
+@media screen and (max-width: 636px) {
+  body {
+    background-color: red;
+  }
+  .openTxt {
+    font-size: 2rem;
+  }
+}
