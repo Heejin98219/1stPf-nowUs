@@ -786,8 +786,22 @@ label {
 
 /* ----- 반응형 ----- */
 /* Oepn.jsx */
-@media screen and (max-width: 636px) {
+@media screen and (max-width: 654px) {
   .openTxt {
     font-size: 2rem;
+  }
+}
+
+/* TopMenu.jsx */
+@media screen and (max-width: 1362px) {
+  .TopMenu-div {
+  }
+
+  .mainMenu {
+    font-size: 23px;
+  }
+
+  .subMenu {
+    font-size: 16px;
   }
 }
