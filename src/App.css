@@ -727,13 +727,11 @@ label {
 /* 아이디 찾기 결과 하단 메뉴 감싸는 ul */
 /* '로그인, 회원가입', '비밀번호 찾기' */
 .otherMenues {
-  .otherMenues {
-    display: flex;
-    justify-content: center;
-    gap: 2.5rem;
-    margin: 0 auto;
-    padding: 0;
-  }
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  margin: 0 auto;
+  padding: 0;
 }
 
 /* 아이디 찾기 결과 하단 베뉴 버튼 */
@@ -806,5 +804,36 @@ label {
 @media screen and (max-width: 1229px) {
   body {
     background-color: pink;
+  }
+
+  /* 메뉴바 UI 변경 */
+  .otherMenues {
+    flex-direction: column; /* 가로 → 세로 */
+    align-items: stretch;
+    gap: 14px;
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .menu-btn {
+    width: 100%;
+  }
+
+  .menu-btn a {
+    display: block;
+    width: 100%;
+    padding: 16px 0;
+    text-align: center;
+
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    background-color: #f7f7f7;
+    color: #333;
+  }
+
+  .menu-btn a:hover {
+    background-color: #eaeaea;
+    color: #000;
   }
 }
