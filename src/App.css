@@ -149,6 +149,8 @@ label {
 /* 각 메인 메뉴*/
 .mainMenu {
   font-size: 28px;
+  white-space: nowrap;
+  word-break: keep-all;
 }
 
 /* 서브메뉴 숨김 */
@@ -740,7 +742,7 @@ label {
   font-weight: bold;
   font-size: 27px;
   background-color: #ff6666;
-  padding: 10px 18px 10px 18px;
+  /* padding: 10px 18px 10px 18px; */
   border-radius: 5px;
   text-align: center;
   color: white;
@@ -763,7 +765,7 @@ label {
   font-size: 22px;
   font-weight: bold;
   border-radius: 12px;
-  padding: 14px 28px;
+  /* padding: 14px 28px; */
   transition: all 0.25s ease;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
 }
@@ -779,7 +781,7 @@ label {
 
 /* hover 효과 */
 .menu-btn:hover a {
-  color: #212529; /* 거의 검정 */
+  color: #212529;
 }
 
 /* ----- 반응형 ----- */
@@ -802,38 +804,20 @@ label {
 }
 
 @media screen and (max-width: 1229px) {
-  body {
-    background-color: pink;
+  .TopMenu-ul {
+    flex-direction: column;
+    height: auto;
   }
 
-  /* 메뉴바 UI 변경 */
-  .otherMenues {
-    flex-direction: column; /* 가로 → 세로 */
-    align-items: stretch;
-    gap: 14px;
-    width: 100%;
-    margin-top: 20px;
-  }
+  .mainMenu {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
 
-  .menu-btn {
-    width: 100%;
-  }
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  .menu-btn a {
-    display: block;
-    width: 100%;
-    padding: 16px 0;
-    text-align: center;
-
-    border: 1px solid #ccc;
-    border-radius: 8px;
-
-    background-color: #f7f7f7;
-    color: #333;
-  }
-
-  .menu-btn a:hover {
-    background-color: #eaeaea;
-    color: #000;
+    white-space: normal;
   }
 }
