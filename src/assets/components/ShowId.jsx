@@ -67,7 +67,7 @@ const ShowId = ({ foundId, foundName, foundTel, goBack }) => {
             </li>
 
             <li className="menu-btn findpw">
-              <Link to="/find-password">비밀번호 찾기</Link>
+              <Link to="/findPw">비밀번호 찾기</Link>
             </li>
           </ul>
         </div>

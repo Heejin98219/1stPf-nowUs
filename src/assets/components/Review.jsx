@@ -10,7 +10,7 @@ const reviews = [
     id: 1,
     img: "https://www.zooseyo.or.kr/dog_sale/photo_free/202402/1708892155_69668500.jpg",
     name: "kyuzizi",
-    text: "작은 거 하나에도 좋아하는 모습 보니까 마음이 너무 따듯해져요..",
+    text: "작은 거 하나에도 좋아하는 모습 보니 맘이 너무 따듯해져요..",
   },
   {
     id: 2,
@@ -28,7 +28,7 @@ const reviews = [
     id: 4,
     img: "https://mediahub.seoul.go.kr/wp-content/uploads/2020/02/2f6ae5e9b4c59861183ae1cb80d5722d.jpg",
     name: "byunsw614",
-    text: "한 걸음 걷는 것만 봐도 미소가 절로 나요 ㅎㅎ",
+    text: "걷는 것만 봐도 미소가 절로 나요 ㅎㅎ",
   },
   {
     id: 5,
@@ -118,7 +118,7 @@ const reviews = [
     id: 19,
     img: "https://cdn.korearailroad.kr/news/photo/202503/2285_3028_626.jpg",
     name: "sunny",
-    text: "남자친구 필요 없어요 ㅋㅋ",
+    text: "남의편 필요 없습니다 ㅋㅋ",
   },
   {
     id: 20,
