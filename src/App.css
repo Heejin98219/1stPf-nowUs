@@ -625,7 +625,7 @@ label {
 .extraMenu > li:hover {
   font-weight: bold;
 }
-/* ScrollTopBtn */
+/* ScrollToTop */
 /* 상단 이동 버튼 */
 .arrow-up {
   position: fixed;

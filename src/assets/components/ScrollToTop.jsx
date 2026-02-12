@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
-const ScrollTop = () => {
+const ScrollToTop = () => {
   const ScrollUp = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -16,4 +16,4 @@ const ScrollTop = () => {
   );
 };
 
-export default ScrollTop;
+export default ScrollToTop;

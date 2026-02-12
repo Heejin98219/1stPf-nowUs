@@ -6,7 +6,7 @@ import Review from "./Review";
 import Information from "./Infomation";
 import Sns from "./Sns";
 import MakeHappy from "./MakeHappy";
-import ScrollTopBtn from "./ScrollTopBtn";
+import ScrollToTop from "./ScrollToTop";
 import Copyright from "./Copyright";
 
 const Components = () => {
@@ -17,7 +17,7 @@ const Components = () => {
       <TopMenu />
       <Carousel />
       <DogsDay />
-      <ScrollTopBtn />
+      <ScrollToTop />
       <Review />
       <MakeHappy />
       <Information />
