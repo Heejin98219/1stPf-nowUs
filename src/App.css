@@ -839,9 +839,3 @@ label {
     font-size: 2rem;
   }
 }
-
-/* ShowId*/
-@media screen and (max-width: 640px) {
-  .idCompleted {
-  }
-}
