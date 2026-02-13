@@ -90,7 +90,7 @@ const FindId = () => {
             onKeyDown={checkEnter}
           />
           <br />
-          <button className="findIdBtn" onClick={FuncFindId}>
+          <button className="findIdBtn btn" onClick={FuncFindId}>
             아이디 찾기
           </button>
         </div>

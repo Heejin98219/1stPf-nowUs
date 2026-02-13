@@ -51,7 +51,7 @@ const FindPw = () => {
             readOnly
           ></input>
           <br />
-          <button className="findPwBtn">비밀번호 찾기</button>
+          <button className="findPwBtn btn">비밀번호 찾기</button>
         </div>
 
         <div className="goFindId-div">

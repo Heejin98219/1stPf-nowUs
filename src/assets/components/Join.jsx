@@ -148,7 +148,7 @@ const Join = () => {
             onKeyDown={checkEnter}
           />
           <br />
-          <button className="joinBtn" onClick={FuncJoin}>
+          <button className="joinBtn btn" onClick={FuncJoin}>
             회원가입
           </button>
         </div>

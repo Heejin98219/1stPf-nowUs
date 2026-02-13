@@ -81,7 +81,7 @@ const Login = () => {
           <br />
 
           {/* 로그인 버튼 */}
-          <button className="loginBtn login-btn" onClick={FuncLogin}>
+          <button className="loginBtn btn" onClick={FuncLogin}>
             로그인
           </button>
 
