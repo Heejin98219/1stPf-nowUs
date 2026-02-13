@@ -4,9 +4,9 @@ const Copyright = () => {
       {/* 저작권 입니다 */}
 
       <div className="footer">
-        본 페이지는 개인 포트폴리오 용도로 제작되었습니다.
+        이 페이지는 포트폴리오 용으로 제작되었습니다.
         <br />
-        콘텐츠의 무단 사용 및 복제를 금합니다.
+        제작자의 허락 없이 무단 사용 및 복제를 금합니다.
         <br />© 2025 CHOHEEJIN. All rights reserved.
       </div>
     </>
