@@ -280,7 +280,7 @@ label {
   margin-bottom: 50px;
 }
 
-/* '함께해요', '동물', '입양' 감싸는 ul*/
+/* '함께해요', '동물', '입양' 감싸는 ul */
 .together {
   display: flex;
   width: 30%;
@@ -826,6 +826,7 @@ label {
 /* ----- 반응형 ----- */
 /* Oepn.jsx */
 @media screen and (max-width: 654px) {
+  /* 텍스트의 div */
   .openTxt {
     font-size: 2rem;
   }
@@ -833,21 +834,25 @@ label {
 
 /* TopMenu.jsx */
 @media screen and (max-width: 1362px) {
+  /* 각 메인 메뉴 */
   .mainMenu {
     font-size: 23px;
   }
 
+  /* 각 서브 메뉴 */
   .subMenu {
     font-size: 16px;
   }
 }
 
 @media screen and (max-width: 1229px) {
+  /*  상단 메뉴 전체 ul */
   .TopMenu-ul {
     flex-direction: column;
     height: auto;
   }
 
+  /* 각 메인 메뉴 */
   .mainMenu {
     display: inline-flex;
     flex-direction: column;
@@ -860,10 +865,12 @@ label {
 
 /* DogDay.jsx */
 @media screen and (max-width: 850px) {
+  /* '함께해요', '동물', '입양' 감싸는 ul */
   .together {
     display: none;
   }
 
+  /* '따뜻한 ~ 이야기' */
   h2.storyTitle {
     margin-top: 2rem;
   }
@@ -871,6 +878,7 @@ label {
 
 /* Reiview.jsx */
 @media screen and (max-width: 640px) {
+  /* '따뜻한 ~ 이야기' */
   .storyTitle {
     font-size: 2rem;
   }
